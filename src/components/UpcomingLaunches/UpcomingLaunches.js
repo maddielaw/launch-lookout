@@ -3,7 +3,14 @@ import './UpcomingLaunches.css'
 
 const UpcomingLaunches = () => {
   return (  
-    <h1>I'm the upcoming launches container</h1>
+    <section className='upcoming-launches-container'>
+      <div className='upcoming-header'>
+        <h2>Upcoming Launches</h2>
+      </div>
+      <div className='upcoming-cards-container'>
+        <p>launch cards go here</p>
+      </div>
+    </section>
   );
 }
  
