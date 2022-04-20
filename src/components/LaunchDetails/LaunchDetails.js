@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { DataContext } from '../../contexts/DataContext';
 import './LaunchDetails.css'
 
-const LaunchDetails = () => {
+const LaunchDetails = ({ name }) => {
+  const allLaunchData = useContext(DataContext)
+
   return (  
     <h1>I'm the launch details page</h1>
   );
