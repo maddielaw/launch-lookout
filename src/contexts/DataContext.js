@@ -1,11 +1,24 @@
-import React, { createContext } from 'react';
+import React, { createContext, useState, useEffect } from 'react';
+import { fetchUpcomingLaunches } from '../apiCalls';
 
-const DataContext = createContext;
+const DataContext = createContext();
 
-const DataContextProvider = () => {
+const DataContextProvider = ({ children }) => {
+
+  const [upcomingLaunches, setUpcomingLaunches] = useState(null);
+
+  useEffect(() => {
+    fetchUpcomingLaunches()
+      .then((data) => {
+        setUpcomingLaunches({
+          upcomingLaunches: data.results
+        })
+      })
+  }, [])
+
   return (  
-    <DataContext.Provider>
-      {children}
+    <DataContext.Provider value={upcomingLaunches}>
+      {upcomingLaunches && children}
     </DataContext.Provider>
   );
 }
