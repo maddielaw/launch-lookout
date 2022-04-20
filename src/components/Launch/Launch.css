@@ -12,6 +12,7 @@
   display: flex;
   flex-direction: column;
   padding: 5px;
+  width: 100%;
 }
 
 .launch-card-btn-container {
