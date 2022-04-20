@@ -12,7 +12,7 @@ const Launch = ({name, launchDate, company, image, mission}) => {
       <div className='launch-deets-container'>
         <p>{launchDate}</p>
         <h3>{name}</h3>
-        {mission ? <p>{mission.description}</p> : <p>No mission description available at this time!</p>}
+        {mission ? <p className='launch-mission-description'>{mission.description}</p> : <p>No mission description available at this time!</p>}
         <div className='launch-card-btn-container'>
           <button>View Launch Details</button>
           <button>Bookmark this Launch</button>
