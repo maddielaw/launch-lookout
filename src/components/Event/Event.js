@@ -9,9 +9,9 @@ const Event = ({ id, name, description, location, date, videoLink }) => {
         <h3 className='event-name'>{name}</h3>
         <p>{date}</p>
       </div>
-      <p>{description}</p>
+      <p className='event-description'>{description}</p>
       <p>Location | {location}</p>
-      {videoLink ? <a href={videoLink}>Watch Livestream</a> : <p>No Livestream available for this event.</p>}
+      {videoLink ? <a className='event-video-link' href={videoLink}>Watch Livestream</a> : <p>No Livestream available for this event.</p>}
     </section>
   );
 }
