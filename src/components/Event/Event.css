@@ -1,0 +1,15 @@
+.event-card {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  border: 1px solid black;
+  justify-content: space-around;
+  height: 7%;
+}
+
+.title-date {
+  display: flex;
+  justify-content: space-between;
+}
+
