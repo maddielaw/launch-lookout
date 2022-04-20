@@ -1,4 +1,5 @@
 import React from 'react';
+import { DataContextProvider } from '../../contexts/DataContext';
 import NextLaunch from '../NextLaunch/NextLaunch';
 import UpcomingLaunches from '../UpcomingLaunches/UpcomingLaunches';
 import './App.css';
@@ -14,10 +15,12 @@ const App = () => {
           <h1 className='header'>🔭 Launch Lookout</h1>
           <button>My Bookmarked Launches</button>
         </nav>
-        <section>
-          <NextLaunch />
-          <UpcomingLaunches />
-        </section>
+        <DataContextProvider>
+          <section>
+              <NextLaunch />
+              <UpcomingLaunches />
+          </section>
+        </DataContextProvider>
       </section>
 
       <section className='space-news'>
