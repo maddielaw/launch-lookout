@@ -1,0 +1,22 @@
+.launch-card {
+  display: flex;
+  margin: 1%;
+}
+
+.launch-img {
+  height: 200px;
+  width: 540px;
+}
+
+.launch-deets-container {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  width: 100%;
+}
+
+.launch-card-btn-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8%;
+}

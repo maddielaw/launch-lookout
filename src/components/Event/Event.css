@@ -1,14 +1,15 @@
-
-.next-launch-section {
+.event-card {
   display: flex;
   flex-direction: column;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  border: 1px solid black;
   justify-content: space-around;
-  height: 15vh;
-  margin-bottom: 3em;
-  margin-top: 2em;
+  height: 7%;
 }
 
-.next-launch-btn-container {
+.title-date {
   display: flex;
   justify-content: space-between;
 }
+
