@@ -1,12 +1,14 @@
+import React from 'react';
 import './App.css';
 
-function App() {
-  return (
-    <main className="App">
-      <h1>Launch Lookout babyyyyy</h1>
-      
+
+
+const App = () => {
+  return (  
+    <main className='App'>
+      <h1>Launch Lookout</h1>
     </main>
   );
 }
-
+ 
 export default App;
