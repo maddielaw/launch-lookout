@@ -11,8 +11,8 @@ const NextLaunch = () => {
       <h2>Next Launch: {nextLaunch.name}</h2>
       <p>{nextLaunch.window_start}</p>
       <div className='next-launch-btn-container'>
-        <button>Bookmark this launch</button>
         <button>View launch details</button>
+        <button>Bookmark this launch</button>
       </div>
     </section>
   );
