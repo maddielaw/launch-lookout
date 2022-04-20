@@ -32,7 +32,7 @@ const SpaceNewsContainer = () => {
 
   return (
     <section className='events-section'>
-      <h2>Upcoming Events in Spaceflight</h2>
+      <h2 className='events-header'>Upcoming Events in Spaceflight</h2>
       <div className='events-container'>
         {upcomingEvents && sortEvents()}
       </div>
