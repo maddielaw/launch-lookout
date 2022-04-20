@@ -1,6 +1,7 @@
 import React from 'react';
 import { DataContextProvider } from '../../contexts/DataContext';
 import NextLaunch from '../NextLaunch/NextLaunch';
+import SpaceNewsContainer from '../SpaceNewsContainer/SpaceNewsContainer';
 import UpcomingLaunches from '../UpcomingLaunches/UpcomingLaunches';
 import './App.css';
 
@@ -20,11 +21,11 @@ const App = () => {
               <NextLaunch />
               <UpcomingLaunches />
           </section>
-        </DataContextProvider>
+        </DataContextProvider>a
       </section>
 
       <section className='space-news'>
-
+        <SpaceNewsContainer />
       </section>
     </main>
   );
