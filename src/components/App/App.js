@@ -14,33 +14,27 @@ const App = () => {
     <main className='App'>
       <Switch>
 
-        <Route exact path='/'>
-          <section className='main-section'>
-            <nav className='nav'>
-              <h1 className='header'>🔭 Launch Lookout</h1>
-              <button>My Bookmarked Launches</button>
-            </nav>
-            <DataContextProvider>
-                  <NextLaunch />
-                  <UpcomingLaunches />
-            </DataContextProvider>a
-          </section>
-          <section className='space-news'>
-            <SpaceNewsContainer />
-          </section>
-        </Route>
-
-        <Route 
-          exact path='/launches/:name'
-          render={({ match }) => {
-            return <LaunchDetails name={match.params.name}/>
-          }}
-
-        
-        />
-
-
-
+        <DataContextProvider>
+          <Route exact path='/'>
+            <section className='main-section'>
+              <nav className='nav'>
+                <h1 className='header'>🔭 Launch Lookout</h1>
+                <button>My Bookmarked Launches</button>
+              </nav>
+                    <NextLaunch />
+                    <UpcomingLaunches />
+            </section>
+            <section className='space-news'>
+              <SpaceNewsContainer />
+            </section>
+          </Route>
+          
+          <Route 
+            exact path='/launches/:name'
+            render={({ match }) => {
+              return <LaunchDetails name={match.params.name}/>
+            }}/>
+        </DataContextProvider>a
 
     </Switch>
     </main>
