@@ -19,9 +19,10 @@ const App = () => {
           <UpcomingLaunches />
         </section>
       </section>
-      <section className='space-news'>
-      </section>
 
+      <section className='space-news'>
+
+      </section>
     </main>
   );
 }
