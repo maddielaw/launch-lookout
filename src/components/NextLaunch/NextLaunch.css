@@ -1,3 +1,13 @@
+
+.next-launch-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 15vh;
+  margin-bottom: 3em;
+  margin-top: 2em;
+}
+
 .next-launch-btn-container {
   display: flex;
   justify-content: space-between;
