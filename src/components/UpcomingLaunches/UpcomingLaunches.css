@@ -1,3 +1,4 @@
 .upcoming-launches-container {
-  height: 90vh;
+  height: 62vh;
+  overflow: scroll;
 }
