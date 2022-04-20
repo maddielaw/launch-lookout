@@ -27,7 +27,7 @@ const UpcomingLaunches = () => {
         <h2>Upcoming Launches</h2>
       </div>
       <div className='upcoming-cards-container'>
-        {sortLaunches()}
+        {launchInfo && sortLaunches()}
       </div>
     </section>
   );
