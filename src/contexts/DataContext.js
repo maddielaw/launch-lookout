@@ -1,5 +1,5 @@
 import React, { createContext, useState, useEffect } from 'react';
-import { fetchUpcomingLaunches } from '../apiCalls';
+import { fetchUpcomingData } from '../apiCalls';
 
 const DataContext = createContext();
 
@@ -8,7 +8,7 @@ const DataContextProvider = ({ children }) => {
   const [upcomingLaunches, setUpcomingLaunches] = useState(null);
 
   useEffect(() => {
-    fetchUpcomingLaunches()
+    fetchUpcomingData('launch')
       .then((data) => {
         setUpcomingLaunches({
           upcomingLaunches: data.results
