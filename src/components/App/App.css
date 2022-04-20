@@ -4,6 +4,7 @@
 
 .App {
   display: flex;
+  height: 100vh;
 }
 
 .main-section {
