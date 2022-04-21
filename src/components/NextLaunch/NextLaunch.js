@@ -13,7 +13,7 @@ const NextLaunch = () => {
       <p className='next-launch-date'>{nextLaunch.window_start}</p>
        <div className='next-launch-btn-container'>
         <Link to={`/launches/${nextLaunch.id}`}>
-          <button>View launch details</button>
+          <button className='launch-details-btn'>View launch details</button>
         </Link>
         <button>Bookmark this launch</button>
       </div>
