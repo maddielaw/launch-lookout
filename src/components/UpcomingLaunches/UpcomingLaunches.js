@@ -10,13 +10,13 @@ const UpcomingLaunches = () => {
     const updatedLaunchInfo = launchInfo.upcomingLaunches.filter((data, i) => i !== 0)
     return updatedLaunchInfo.map(launch => {
       return <Launch 
-      mission={launch.mission}
-      name={launch.name} 
-      launchDate={launch.window_start} 
-      company={launch.launch_service_provider.name} 
-      image={launch.image} 
-      key={launch.id}
-      id={launch.id}
+        mission={launch.mission}
+        name={launch.name} 
+        launchDate={launch.window_start} 
+        company={launch.launch_service_provider.name} 
+        image={launch.image} 
+        key={launch.id}
+        id={launch.id}
       />
     })
   }
