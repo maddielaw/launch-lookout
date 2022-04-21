@@ -27,7 +27,7 @@ const Bookmarks = () => {
     <section className='bookmark-section'>
       <div className='bookmark-header'>
         <h1>🚀 My Bookmarked Launches</h1>
-        <Link to='/'><button>X</button></Link>
+        <Link to='/'><button className='back-to-main'>X</button></Link>
       </div>
       <div className='bookmark-container'>
         {renderBookmarkCards()}
