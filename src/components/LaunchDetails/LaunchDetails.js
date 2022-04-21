@@ -6,7 +6,7 @@ const LaunchDetails = ({ launch }) => {
     <section className='launch-details-section'>
       <div className='mission-div'>
         <div className='mission-patch'>
-          {launch.mission_patches.length ? <img className='mission-patch-img' src={launch.mission_patches[0].image_url} /> : <img className='mission-patch-img' src={'https://images.unsplash.com/photo-1580551730007-11f498ebb39d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1501&q=80'}/>}
+          {launch.mission_patches.length ? <img className='mission-patch-img' src={launch.mission_patches[0].image_url} alt='Mission patch' /> : <img className='mission-patch-img' alt='Rocket lifting off against bright blue sky'src={'https://images.unsplash.com/photo-1580551730007-11f498ebb39d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1501&q=80'}/>}
           </div>
         <div className='mission-description'>
           <h2>Mission Details</h2>
@@ -29,7 +29,7 @@ const LaunchDetails = ({ launch }) => {
           <p>Launching from: {launch.pad.name} {launch.pad.location.name}</p>
         </div>
         <div className='map'>
-          <img className='map-img'src={launch.pad.map_image} />
+          <img className='map-img' alt='Launch pad location on a map'src={launch.pad.map_image} />
         </div>
       </div>
     </section>
