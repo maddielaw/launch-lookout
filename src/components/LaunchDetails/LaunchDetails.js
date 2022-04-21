@@ -10,21 +10,21 @@ const LaunchDetails = ({ launch }) => {
           </div>
         <div className='mission-description'>
           <h2>Mission Details</h2>
-          {launch.mission ? <p>{launch.mission.description}</p> : <p>No mission details available yet for this launch. Please check back later!</p>}
-          {launch.mission ? <p>Destination: {launch.mission.orbit.name}</p> : <p>Destination: Orbit information is not available for this launch.</p> }          
-          {launch.mission ? <p>Mission type: {launch.mission.type}</p> : <p>Mission type: Mission type is not available for this launch.</p>}
+          {launch.mission ? <p className='description'>{launch.mission.description}</p> : <p>No mission details available yet for this launch. Please check back later!</p>}
+          {launch.mission ? <p className='orbit'>Destination: {launch.mission.orbit.name}</p> : <p>Destination: Orbit information is not available for this launch.</p> }          
+          {launch.mission ? <p className='mission-type'>Mission type: {launch.mission.type}</p> : <p>Mission type: Mission type is not available for this launch.</p>}
           <p>Launch Provider: {launch.launch_service_provider.name}</p>
         </div>
       </div>
       <div className='launch-div'>
         <div className='launch-details'>
           <h2>Launch Details</h2>
-          {launch.vidURLs.length ? <a href={launch.vidURLs[0].url}>Watch live webcast</a> : null}
+          {launch.vidURLs.length ? <a className='launch-vid' href={launch.vidURLs[0].url}>Watch live webcast</a> : null}
           <div className='launch-window'>
             <p>Launch window start: {launch.window_start}</p>
             {launch.probability && <p>Launch probability: {launch.probability}%</p>}
           </div>
-          <p>Rocket: {launch.rocket.configuration.full_name}</p>
+          <p className='rocket-type'>Rocket: {launch.rocket.configuration.full_name}</p>
           <p>{launch.rocket.configuration.description}</p>
           <p>Launching from: {launch.pad.name} {launch.pad.location.name}</p>
         </div>
