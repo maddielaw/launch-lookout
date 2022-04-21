@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { format } from 'date-fns';
 import { BookmarkContext } from '../../contexts/BookmarkContext';
 import { DataContext } from '../../contexts/DataContext';
 import LaunchDetails from '../LaunchDetails/LaunchDetails';
@@ -20,7 +21,7 @@ const SingleLaunchPage = ({ id }) => {
       company: launch.launch_service_provider.name, 
       image: launch.image,
       mission: launch.mission.description,
-      launchDate: launch.window_start
+      launchDate: format(new Date(launch.window_start), "E. MMMM dd, yyy, p")
     }
     bookmarkData.setBookmarks([...bookmarkData.bookmarks, newLaunch])
     setIsBookmarked(true)
@@ -37,7 +38,7 @@ const SingleLaunchPage = ({ id }) => {
       <div className='titles-div'>
         <div className='title-text'>
           <h1 className='mission-name'>{launch.name}</h1>
-          <p>{launch.window_start}</p>
+          <p>{format(new Date(launch.window_start), "E. MMMM dd, yyy, p")}</p>
           <p>Status: {launch.status.name}</p>
         </div>
         <div className='title-buttons'>

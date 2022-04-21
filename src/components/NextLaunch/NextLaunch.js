@@ -2,6 +2,7 @@ import React, { useContext, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { BookmarkContext } from '../../contexts/BookmarkContext';
 import { DataContext } from '../../contexts/DataContext';
+import { format } from 'date-fns';
 import './NextLaunch.css'
 
 const NextLaunch = () => {
@@ -18,7 +19,7 @@ const NextLaunch = () => {
       company: nextLaunch.launch_service_provider.name, 
       image: nextLaunch.image,
       mission: nextLaunch.mission.description,
-      launchDate: nextLaunch.window_start
+      launchDate: format(new Date(nextLaunch.window_start), "E. MMMM dd, yyy, p")
     }
     bookmarkData.setBookmarks([...bookmarkData.bookmarks, newLaunch])
     setIsBookmarked(true)
@@ -33,7 +34,7 @@ const NextLaunch = () => {
   return (
     <section className='next-launch-section'>
       <h2 className='next-launch-name'>Next Launch: {nextLaunch.name}</h2>
-      <p className='next-launch-date'>{nextLaunch.window_start}</p>
+      <p className='next-launch-date'>{format(new Date(nextLaunch.window_start), "E. MMMM dd, yyy, p")}</p>
        <div className='next-launch-btn-container'>
         <Link to={`/launches/${nextLaunch.id}`}>
           <button className='launch-details-btn'>View launch details</button>
