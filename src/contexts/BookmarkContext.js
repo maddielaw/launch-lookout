@@ -6,11 +6,10 @@ const BookmarkContextProvider = ({ children }) => {
 
   const [bookmarks, setBookmarks] = useState([]);
 
-  const removeBookmark = (launch) => {
-    let index = bookmarks.map(bookmark => {return bookmark.name}).indexOf(launch)
-    bookmarks.splice(index, 1)
+  const removeBookmark = (launchID) => {
+    const filteredLaunches = bookmarks.filter(bookmark => bookmark.id !== launchID)
+    setBookmarks(filteredLaunches)
   }
-
 
   return (  
     <BookmarkContext.Provider value={{ bookmarks, setBookmarks, removeBookmark }}>
