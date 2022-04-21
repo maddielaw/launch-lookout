@@ -1,0 +1,64 @@
+.launch-details-section {
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+}
+
+.mission-div {
+  display: flex;
+  height: 50%;
+}
+
+.mission-patch {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 30%;
+  padding: 1em;
+}
+
+.mission-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+  padding: 1em;
+}
+
+.launch-div {
+  display: flex;
+  height: 60%;
+  width: 100vw;
+}
+
+.launch-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 1em;
+  width: 80em;
+}
+
+.launch-window {
+  display: flex;
+  justify-content: space-around;
+}
+
+.map {
+  display: flex;
+  flex-direction: center;
+  margin-right: 2em;
+}
+
+.map-img {
+  height: 24em;
+  width: 52em;
+}
+
+
+
+
+
+
+
+
