@@ -1,9 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { BookmarkContext } from '../../contexts/BookmarkContext';
 import './Launch.css'
 
 
 const Launch = ({ id, name, launchDate, company, image, mission}) => {
+  const bookmarkData = useContext(BookmarkContext);
+
+  const addBookmark = () => {
+    const newLaunch = {id, name, launchDate, company, image, mission}
+    bookmarkData.setBookmarks([...bookmarkData.bookmarks, newLaunch])
+  }
+
   return (
     <section className='launch-card'>
       <div className='img-company-container'>
@@ -18,7 +26,7 @@ const Launch = ({ id, name, launchDate, company, image, mission}) => {
           <Link to={`/launches/${id}`}>
             <button>View Launch Details</button>
           </Link>
-          <button>Bookmark this Launch</button>
+          <button onClick={() => addBookmark()}>Bookmark this Launch</button>
         </div>
       </div>
 
