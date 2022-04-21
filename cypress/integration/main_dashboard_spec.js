@@ -113,4 +113,14 @@ describe('Main dashboard flow', () => {
     .get('.event-card').first().get('.event-video-link').should('have.attr', 'href').should('include', "https://www.youtube.com/watch?v=GBFZghqrI_4")
   })
 
+  it('should be able to bookmark a launch on the main dashboard', () => {
+    cy.intercept('GET', 'https://spacelaunchnow.me/api/ll/2.2.0/launch/upcoming/?limit=20&mode=detailed', upcomingLaunches()).as('getLaunches')
+    cy.intercept('GET', 'https://spacelaunchnow.me/api/ll/2.2.0/event/upcoming/?limit=20&mode=detailed', upcomingEvents()).as('getEvents')
+    cy.visit('http://localhost:3000/')
+    .get('.next-launch-section').find('.bookmark-btn').click()
+    .contains('Launch Bookmarked 👍')
+    .get('.launch-card').first().find('.bookmark-btn').click()
+    .contains('Launch Bookmarked 👍')
+  })
+
 })
