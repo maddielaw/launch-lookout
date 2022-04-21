@@ -8,7 +8,7 @@ const SavedLaunch = ({id, name, company, image, mission, launchDate, removeBookm
     <section className='saved-launch-card'>
       <div className='date-delete'>
         <p>{launchDate}</p>
-        <button onClick={() => removeBookmark(id)}>X</button>
+        <button className='remove-bookmark-btn' onClick={() => removeBookmark(id)}>X</button>
       </div>
       <div className='saved-launch-details-container'>
         <div className='saved-img-container' >
