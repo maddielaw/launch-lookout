@@ -10,7 +10,14 @@ const Launch = ({ id, name, launchDate, company, image, mission}) => {
   const [isBookmarked, setIsBookmarked] = useState(false);
 
   const addBookmark = () => {
-    const newLaunch = {id, name, launchDate, company, image, mission}
+    const newLaunch = {
+      id, 
+      name, 
+      launchDate, 
+      company, 
+      image, 
+      mission: mission.description
+    }
     bookmarkData.setBookmarks([...bookmarkData.bookmarks, newLaunch])
     setIsBookmarked(true)
   }
