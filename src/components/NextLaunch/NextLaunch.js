@@ -17,7 +17,8 @@ const NextLaunch = () => {
       name: nextLaunch.name, 
       company: nextLaunch.launch_service_provider.name, 
       image: nextLaunch.image,
-      mission: nextLaunch.mission.description
+      mission: nextLaunch.mission.description,
+      launchDate: nextLaunch.window_start
     }
     bookmarkData.setBookmarks([...bookmarkData.bookmarks, newLaunch])
     setIsBookmarked(true)
