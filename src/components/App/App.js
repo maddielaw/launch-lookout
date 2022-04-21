@@ -22,7 +22,7 @@ const App = () => {
               <section className='main-section'>
                 <nav className='nav'>
                   <h1 className='header'>🔭 Launch Lookout</h1>
-                  <Link to='/bookmarks'><button>My Bookmarked Launches</button></Link>
+                  <Link to='/bookmarks'><button className='bookmarks-page-btn'>My Bookmarked Launches</button></Link>
                 </nav>
                       <NextLaunch />
                       <UpcomingLaunches />
