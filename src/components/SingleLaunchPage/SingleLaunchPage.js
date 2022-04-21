@@ -13,13 +13,13 @@ const SingleLaunchPage = ({ id }) => {
     <section className='single-launch-page'>
       <div className='titles-div'>
         <div className='title-text'>
-          <h1>{launch.name}</h1>
+          <h1 className='mission-name'>{launch.name}</h1>
           <p>{launch.window_start}</p>
           <p>Status: {launch.status.name}</p>
         </div>
         <div className='title-buttons'>
           <Link to='/'>
-            <button>X</button>
+            <button className='back-to-main'>X</button>
           </Link>
           <button>Bookmark this Launch</button>
         </div>
