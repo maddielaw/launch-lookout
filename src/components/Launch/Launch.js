@@ -43,7 +43,7 @@ const Launch = ({ id, name, launchDate, company, image, mission}) => {
           <Link to={`/launches/${id}`}>
             <button>View Launch Details</button>
           </Link>
-          <button disabled={isBookmarked} onClick={() => addBookmark()}>Bookmark this Launch</button>
+          {isBookmarked ? <button disabled>Launch Bookmarked 👍</button> : <button onClick={() => addBookmark()}>Bookmark this Launch</button>}
         </div>
       </div>
 
