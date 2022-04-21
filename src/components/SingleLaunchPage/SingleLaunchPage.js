@@ -19,7 +19,8 @@ const SingleLaunchPage = ({ id }) => {
       name: launch.name, 
       company: launch.launch_service_provider.name, 
       image: launch.image,
-      mission: launch.mission.description
+      mission: launch.mission.description,
+      launchDate: launch.window_start
     }
     bookmarkData.setBookmarks([...bookmarkData.bookmarks, newLaunch])
     setIsBookmarked(true)
