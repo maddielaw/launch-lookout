@@ -16,7 +16,8 @@ const Bookmarks = () => {
         name={bookmark.name} 
         company={bookmark.company} 
         image={bookmark.image} 
-        mission={bookmark.mission} 
+        mission={bookmark.mission}
+        launchDate={bookmark.launchDate} 
         removeBookmark={bookmarkData.removeBookmark}
       />
     })
