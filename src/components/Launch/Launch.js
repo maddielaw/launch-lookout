@@ -1,8 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Launch.css'
 
 
-const Launch = ({name, launchDate, company, image, mission}) => {
+const Launch = ({ id, name, launchDate, company, image, mission}) => {
   return (
     <section className='launch-card'>
       <div className='img-company-container'>
@@ -14,7 +15,9 @@ const Launch = ({name, launchDate, company, image, mission}) => {
         <h3>{name}</h3>
         {mission ? <p className='launch-mission-description'>{mission.description}</p> : <p>No mission description available at this time!</p>}
         <div className='launch-card-btn-container'>
-          <button>View Launch Details</button>
+          <Link to={`/launches/${id}`}>
+            <button>View Launch Details</button>
+          </Link>
           <button>Bookmark this Launch</button>
         </div>
       </div>
