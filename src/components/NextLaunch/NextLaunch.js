@@ -38,7 +38,7 @@ const NextLaunch = () => {
         <Link to={`/launches/${nextLaunch.id}`}>
           <button className='launch-details-btn'>View launch details</button>
         </Link>
-        <button disabled={isBookmarked} onClick={() => addBookmark()}>Bookmark this launch</button>
+        {isBookmarked ? <button disabled>Launch Bookmarked 👍</button> : <button onClick={() => addBookmark()}>Bookmark this Launch</button>}
       </div>
     </section>
   );
