@@ -1,5 +1,3 @@
-
-
 const upcomingLaunches = () => {
   return {
     statusCode: 200,
