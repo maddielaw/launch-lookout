@@ -68,6 +68,7 @@ describe('Bookmark flow', () => {
       .get('.bookmarks-page-btn').click()
       .url().should('eq', 'http://localhost:3000/bookmarks')
       .get('h1').contains('🚀 My Bookmarked Launches')
+      .get('.bookmark-container').contains('No launches bookmarked yet!')
 });
 
   it('should show users their bookmarked launches', () => {
