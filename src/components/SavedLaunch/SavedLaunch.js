@@ -10,12 +10,16 @@ const SavedLaunch = ({id, name, company, image, mission, launchDate, removeBookm
         <p>{launchDate}</p>
         <button>X</button>
       </div>
-      <div className='saved-launch-details'>
-        <img className='saved-launch-img'src={image} />
-        <h2>{name}</h2>
-        <p>{company}</p>
-        <p>{mission}</p>
-        <Link to={`/launches/${id}`}><button>View Launch Details</button></Link>
+      <div className='saved-launch-details-container'>
+        <div className='saved-img-container' >
+          <img className='saved-launch-img'src={image} />
+        </div>
+        <div className='saved-launch-details'>
+          <h2>{name}</h2>
+          <p>{company}</p>
+          <p>{mission}</p>
+          <Link to={`/launches/${id}`}><button>View Launch Details</button></Link>
+        </div>
       </div>
     </section>
 
