@@ -30,7 +30,7 @@ const Bookmarks = () => {
         <Link to='/'><button className='back-to-main'>X</button></Link>
       </div>
       <div className='bookmark-container'>
-        {renderBookmarkCards()}
+        {bookmarkData.bookmarks.length ? renderBookmarkCards() : "No launches bookmarked yet!"}
       </div>
     </section>
   );
