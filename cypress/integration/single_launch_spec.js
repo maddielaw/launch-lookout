@@ -75,4 +75,11 @@ describe('Single Launch flow', () => {
     .url().should('eq', 'http://localhost:3000/')
   });
 
+  it('should be able to bookmark a launch', () => {
+    cy.intercept('GET', 'https://spacelaunchnow.me/api/ll/2.2.0/launch/upcoming/?limit=20&mode=detailed', singleLaunch()).as('getSingleLaunch')
+    cy.visit('http://localhost:3000/launches/2c5447d7-36c5-40fd-88de-47ed6b258bdb')
+    .get('.single-launch-page').find('.bookmark-btn').click()
+    .contains('Launch Bookmarked 👍')
+  });
+
 })
