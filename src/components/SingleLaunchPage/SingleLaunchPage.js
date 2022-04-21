@@ -42,9 +42,12 @@ const SingleLaunchPage = ({ id }) => {
         </div>
         <div className='title-buttons'>
           <Link to='/'>
-            <button className='back-to-main'>X</button>
+            <button className='back-to-main'>Back to Main</button>
           </Link>
-          <button disabled={isBookmarked} onClick={() => addBookmark()}>Bookmark this Launch</button>
+          <Link to='/bookmarks'>
+            <button>My Bookmarks</button>
+          </Link>
+          {isBookmarked ? <button disabled>Launch Bookmarked 👍</button> : <button onClick={() => addBookmark()}>Bookmark this Launch</button>}
         </div>
       </div>
       <LaunchDetails launch={launch}/>
