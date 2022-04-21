@@ -59,66 +59,46 @@ const upcomingEvents = () => {
 }
 
 
-describe('Main dashboard flow', () => {
+describe('Bookmark flow', () => {
 
-  it('should display the header', () => {
+  it('should route user to Bookmarks page', () => {
     cy.intercept('GET', 'https://spacelaunchnow.me/api/ll/2.2.0/launch/upcoming/?limit=20&mode=detailed', upcomingLaunches()).as('getLaunches')
     cy.intercept('GET', 'https://spacelaunchnow.me/api/ll/2.2.0/event/upcoming/?limit=20&mode=detailed', upcomingEvents()).as('getEvents')
     cy.visit('http://localhost:3000/')
-    .get('.header').contains('🔭 Launch Lookout')
-    .get('button').contains('My Bookmarked Launches')
+      .get('.bookmarks-page-btn').click()
+      .url().should('eq', 'http://localhost:3000/bookmarks')
+      .get('h1').contains('🚀 My Bookmarked Launches')
+      .get('.bookmark-container').contains('No launches bookmarked yet!')
 });
 
-
-  it('should display the next upcoming launch', () => {
+  it('should show users their bookmarked launches', () => {
     cy.intercept('GET', 'https://spacelaunchnow.me/api/ll/2.2.0/launch/upcoming/?limit=20&mode=detailed', upcomingLaunches()).as('getLaunches')
     cy.intercept('GET', 'https://spacelaunchnow.me/api/ll/2.2.0/event/upcoming/?limit=20&mode=detailed', upcomingEvents()).as('getEvents')
     cy.visit('http://localhost:3000/')
-    .get('.next-launch-name').contains('Next Launch: Falcon 9 Block 5 | Starlink Group 4-14')
-    .get('.next-launch-date').contains('2022-04-21T15:16:00Z')
-  })
+      .get('.next-launch-section').find('.bookmark-btn').click()
+      .get('.bookmarks-page-btn').click()
+      .get('.saved-launch-card').first().get('.saved-launch-details').find('h2').contains('Falcon 9 Block 5 | Starlink Group 4-14')
+  });
 
-  it('should display a list of the next upcoming launches', () => {
+  it('should be able to delete bookmarked launches', () => {
     cy.intercept('GET', 'https://spacelaunchnow.me/api/ll/2.2.0/launch/upcoming/?limit=20&mode=detailed', upcomingLaunches()).as('getLaunches')
     cy.intercept('GET', 'https://spacelaunchnow.me/api/ll/2.2.0/event/upcoming/?limit=20&mode=detailed', upcomingEvents()).as('getEvents')
     cy.visit('http://localhost:3000/')
-    .get('.upcoming-header').contains('Upcoming Launches')
-    .get('.upcoming-cards-container').find('.launch-card').should('have.length', 2)
-  })
+      .get('.next-launch-section').find('.bookmark-btn').click()
+      .get('.launch-card').first().find('.bookmark-btn').click()
+      .get('.bookmarks-page-btn').click()
+      .get('.bookmark-container').find('.saved-launch-card').should('have.length', 2)
+      .get('.saved-launch-card').first().find('.remove-bookmark-btn').click()
+      .get('.bookmark-container').find('.saved-launch-card').should('have.length', 1)
+  });
 
-   it('should display launch cards that include details on the launch', () => {
+
+  it('should be able to take user back to main dashboard', () => {
     cy.intercept('GET', 'https://spacelaunchnow.me/api/ll/2.2.0/launch/upcoming/?limit=20&mode=detailed', upcomingLaunches()).as('getLaunches')
     cy.intercept('GET', 'https://spacelaunchnow.me/api/ll/2.2.0/event/upcoming/?limit=20&mode=detailed', upcomingEvents()).as('getEvents')
     cy.visit('http://localhost:3000/')
-    .get('.launch-card').first().find('img').should('have.attr', 'src').should('include', 'https://spacelaunchnow-prod-east.nyc3.cdn.digitaloceanspaces.com/media/launch_images/falcon2520925_image_20220308100515.jpeg')
-    .get('.launch-mission-description').contains('Commercial rideshare mission including payloads for Alba Orb')
-  })
-
-  it('should display 20 upcoming events', () => {
-    cy.intercept('GET', 'https://spacelaunchnow.me/api/ll/2.2.0/launch/upcoming/?limit=20&mode=detailed', upcomingLaunches()).as('getLaunches')
-    cy.intercept('GET', 'https://spacelaunchnow.me/api/ll/2.2.0/event/upcoming/?limit=20&mode=detailed', upcomingEvents()).as('getEvents')
-    cy.visit('http://localhost:3000/')
-    .get('.events-header').contains('Upcoming Events in Spaceflight')
-    .get('.events-container').find('.event-card').should('have.length', 2)
-  })
-
-  it('should display event cards with details on the event', () => {
-    cy.intercept('GET', 'https://spacelaunchnow.me/api/ll/2.2.0/launch/upcoming/?limit=20&mode=detailed', upcomingLaunches()).as('getLaunches')
-    cy.intercept('GET', 'https://spacelaunchnow.me/api/ll/2.2.0/event/upcoming/?limit=20&mode=detailed', upcomingEvents()).as('getEvents')
-    cy.visit('http://localhost:3000/')
-    .get('.event-card').first().get('.event-name').contains('SpaceX AX-1 Crew Dragon Undocking')
-    .get('.event-card').first().get('.event-description').contains(`The AX-1 Crew Dragon will undock from the International Space Station, carrying Axiom Space Mission 1 commander Michael López-Alegría and passengers Larry Connor, Eytan Stibbe and Mark Pathy. It will then reenter the Earth's atmosphere and splashdown in the Atlantic Ocean.`)
-    .get('.event-card').first().get('.event-video-link').should('have.attr', 'href').should('include', "https://www.youtube.com/watch?v=GBFZghqrI_4")
-  })
-
-  it('should be able to bookmark a launch on the main dashboard', () => {
-    cy.intercept('GET', 'https://spacelaunchnow.me/api/ll/2.2.0/launch/upcoming/?limit=20&mode=detailed', upcomingLaunches()).as('getLaunches')
-    cy.intercept('GET', 'https://spacelaunchnow.me/api/ll/2.2.0/event/upcoming/?limit=20&mode=detailed', upcomingEvents()).as('getEvents')
-    cy.visit('http://localhost:3000/')
-    .get('.next-launch-section').find('.bookmark-btn').click()
-    .contains('Launch Bookmarked 👍')
-    .get('.launch-card').first().find('.bookmark-btn').click()
-    .contains('Launch Bookmarked 👍')
-  })
-
+      .get('.bookmarks-page-btn').click()
+      .get('.back-to-main').click()
+      .url().should('eq', 'http://localhost:3000/')
+  });
 })

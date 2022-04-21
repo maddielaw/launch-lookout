@@ -1,10 +1,38 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
+import { BookmarkContext } from '../../contexts/BookmarkContext';
+import SavedLaunch from '../SavedLaunch/SavedLaunch';
 import './Bookmarks.css'
 
 
 const Bookmarks = () => {
-  return (  
-    <h1>I'm the bookmarks section</h1>
+  const bookmarkData = useContext(BookmarkContext);
+
+  const renderBookmarkCards = () => {
+    return bookmarkData.bookmarks.map(bookmark => {
+      return <SavedLaunch 
+        id={bookmark.id} 
+        key={bookmark.id} 
+        name={bookmark.name} 
+        company={bookmark.company} 
+        image={bookmark.image} 
+        mission={bookmark.mission}
+        launchDate={bookmark.launchDate} 
+        removeBookmark={bookmarkData.removeBookmark}
+      />
+    })
+  }
+
+  return (
+    <section className='bookmark-section'>
+      <div className='bookmark-header'>
+        <h1>🚀 My Bookmarked Launches</h1>
+        <Link to='/'><button className='back-to-main'>X</button></Link>
+      </div>
+      <div className='bookmark-container'>
+        {bookmarkData.bookmarks.length ? renderBookmarkCards() : "No launches bookmarked yet!"}
+      </div>
+    </section>
   );
 }
  

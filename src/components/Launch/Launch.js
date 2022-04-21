@@ -1,9 +1,34 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { BookmarkContext } from '../../contexts/BookmarkContext';
 import './Launch.css'
 
 
 const Launch = ({ id, name, launchDate, company, image, mission}) => {
+  const bookmarkData = useContext(BookmarkContext);
+  const [isBookmarked, setIsBookmarked] = useState(false);
+
+  const addBookmark = () => {
+    const checkedMission = mission ? mission.description : "No mission description available at this time!"
+    const newLaunch = {
+      id, 
+      name, 
+      launchDate, 
+      company, 
+      image, 
+      mission: checkedMission
+    }
+    bookmarkData.setBookmarks([...bookmarkData.bookmarks, newLaunch])
+    setIsBookmarked(true)
+  }
+
+  useEffect(() => {
+    if (bookmarkData.bookmarks.some(bookmark => bookmark.id === id)) {
+      setIsBookmarked(true)
+    }
+  }, [])
+
   return (
     <section className='launch-card'>
       <div className='img-company-container'>
@@ -18,7 +43,7 @@ const Launch = ({ id, name, launchDate, company, image, mission}) => {
           <Link to={`/launches/${id}`}>
             <button>View Launch Details</button>
           </Link>
-          <button>Bookmark this Launch</button>
+          {isBookmarked ? <button className='bookmark-btn' disabled>Launch Bookmarked 👍</button> : <button className='bookmark-btn' onClick={() => addBookmark()}>Bookmark this Launch</button>}
         </div>
       </div>
 

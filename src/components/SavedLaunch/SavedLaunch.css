@@ -1,0 +1,40 @@
+.saved-launch-card {
+  padding: .5em;
+  height: 100%;
+  width: 80%;
+}
+
+.date-delete {
+  display: flex;
+  justify-content: space-between;
+  height: 7%;
+}
+
+.saved-launch-details-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* height: 47%; */
+}
+
+.saved-launch-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 100%;
+  margin-bottom: 1em;
+}
+
+.saved-img-container {
+  margin: 0;
+  width: 100%;
+  height: 90%;
+  margin-bottom: 1em;
+}
+
+.saved-launch-img {
+  height: 250px;
+  width: 100%;
+  /* object-fit: cover; */
+}

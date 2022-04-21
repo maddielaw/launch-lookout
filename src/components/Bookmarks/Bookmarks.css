@@ -1,0 +1,24 @@
+.bookmark-section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+}
+
+.bookmark-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  height: 10%;
+}
+
+.bookmark-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  overflow: scroll;
+  grid-gap: 2em;
+  padding: 2em;
+  height: 100vh;
+
+}
