@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, Switch, Link } from 'react-router-dom';
 import { DataContextProvider } from '../../contexts/DataContext';
 import NextLaunch from '../NextLaunch/NextLaunch';
-import LaunchDetails from '../LaunchDetails/LaunchDetails';
+import SingleLaunchPage from '../SingleLaunchPage/SingleLaunchPage';
 import SpaceNewsContainer from '../SpaceNewsContainer/SpaceNewsContainer';
 import UpcomingLaunches from '../UpcomingLaunches/UpcomingLaunches';
 import './App.css';
@@ -28,13 +28,13 @@ const App = () => {
               <SpaceNewsContainer />
             </section>
           </Route>
-          
+
           <Route 
-            exact path='/launches/:name'
+            exact path='/launches/:id'
             render={({ match }) => {
-              return <LaunchDetails name={match.params.name}/>
+              return <SingleLaunchPage id={match.params.id}/>
             }}/>
-        </DataContextProvider>a
+        </DataContextProvider>
 
     </Switch>
     </main>
