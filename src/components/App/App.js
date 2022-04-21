@@ -1,7 +1,8 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, Link } from 'react-router-dom';
 import { BookmarkContextProvider } from '../../contexts/BookmarkContext';
 import { DataContextProvider } from '../../contexts/DataContext';
+import Bookmarks from '../Bookmarks/Bookmarks';
 import NextLaunch from '../NextLaunch/NextLaunch';
 import SingleLaunchPage from '../SingleLaunchPage/SingleLaunchPage';
 import SpaceNewsContainer from '../SpaceNewsContainer/SpaceNewsContainer';
@@ -21,7 +22,7 @@ const App = () => {
               <section className='main-section'>
                 <nav className='nav'>
                   <h1 className='header'>🔭 Launch Lookout</h1>
-                  <button>My Bookmarked Launches</button>
+                  <Link to='/bookmarks'><button>My Bookmarked Launches</button></Link>
                 </nav>
                       <NextLaunch />
                       <UpcomingLaunches />
@@ -29,6 +30,10 @@ const App = () => {
               <section className='space-news'>
                 <SpaceNewsContainer />
               </section>
+            </Route>
+
+            <Route exact path='/bookmarks'>
+              <Bookmarks />
             </Route>
 
             <Route 
