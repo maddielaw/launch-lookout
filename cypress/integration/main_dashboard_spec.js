@@ -112,4 +112,5 @@ describe('Main dashboard flow', () => {
     .get('.event-card').first().get('.event-description').contains(`The AX-1 Crew Dragon will undock from the International Space Station, carrying Axiom Space Mission 1 commander Michael López-Alegría and passengers Larry Connor, Eytan Stibbe and Mark Pathy. It will then reenter the Earth's atmosphere and splashdown in the Atlantic Ocean.`)
     .get('.event-card').first().get('.event-video-link').should('have.attr', 'href').should('include', "https://www.youtube.com/watch?v=GBFZghqrI_4")
   })
+
 })
