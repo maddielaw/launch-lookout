@@ -1,0 +1,13 @@
+.bookmark-section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.bookmark-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  height: 10%;
+}
