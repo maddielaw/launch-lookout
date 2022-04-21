@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { BookmarkContext } from '../../contexts/BookmarkContext';
 import { DataContext } from '../../contexts/DataContext';
@@ -11,6 +11,8 @@ const SingleLaunchPage = ({ id }) => {
   const launch = specificLaunch[0]
   const bookmarkData = useContext(BookmarkContext);
 
+  const [isBookmarked, setIsBookmarked] = useState(false);
+
   const addBookmark = () => {
     const newLaunch = {
       id: id, 
@@ -20,7 +22,14 @@ const SingleLaunchPage = ({ id }) => {
       mission: launch.mission.description
     }
     bookmarkData.setBookmarks([...bookmarkData.bookmarks, newLaunch])
+    setIsBookmarked(true)
   }
+
+  useEffect(() => {
+    if (bookmarkData.bookmarks.some(bookmark => bookmark.id === id)) {
+      setIsBookmarked(true)
+    }
+  }, [])
 
   return (  
     <section className='single-launch-page'>
@@ -34,7 +43,7 @@ const SingleLaunchPage = ({ id }) => {
           <Link to='/'>
             <button className='back-to-main'>X</button>
           </Link>
-          <button onClick={() => addBookmark()}>Bookmark this Launch</button>
+          <button disabled={isBookmarked} onClick={() => addBookmark()}>Bookmark this Launch</button>
         </div>
       </div>
       <LaunchDetails launch={launch}/>
