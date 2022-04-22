@@ -4,15 +4,16 @@ import './Countdown.css'
 
 
 const Countdown = ({ date, status, statusDescription }) => {
-  const [now, setNow] = useState(new Date())
+
+  const [currentTime, setCurrentTime] = useState(new Date())
   const launchDate = new Date(date)
   // const launchDate = new Date("2022-04-23T22:35:00Z")
-  const isTimeUp = isBefore(launchDate, now);
+  const isTimeUp = isBefore(launchDate, currentTime);
   let days, hours, minutes, seconds = 0
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setNow(new Date())
+      setCurrentTime(new Date())
     }, 1000)
     return () => {
       clearInterval(interval)
@@ -20,7 +21,7 @@ const Countdown = ({ date, status, statusDescription }) => {
   }, [])
 
   if (!isTimeUp) {
-    const duration = intervalToDuration({start: now, end: launchDate})
+    const duration = intervalToDuration({start: currentTime, end: launchDate})
     days = duration.days;
     hours = duration.hours;
     minutes = duration.minutes;
