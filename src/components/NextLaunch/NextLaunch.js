@@ -4,6 +4,7 @@ import { BookmarkContext } from '../../contexts/BookmarkContext';
 import { DataContext } from '../../contexts/DataContext';
 import { format } from 'date-fns';
 import './NextLaunch.css'
+import Countdown from '../Countdown/Countdown';
 
 const NextLaunch = () => {
   const launchInfo = useContext(DataContext)
@@ -35,6 +36,7 @@ const NextLaunch = () => {
     <section className='next-launch-section'>
       <h2 className='next-launch-name'>Next Launch: {nextLaunch.name}</h2>
       <p className='next-launch-date'>{format(new Date(nextLaunch.window_start), "E. MMMM dd, yyy, p")}</p>
+      <Countdown date={nextLaunch.window_start} status={nextLaunch.status.name} statusDescription={nextLaunch.status.description}/>
        <div className='next-launch-btn-container'>
         <Link to={`/launches/${nextLaunch.id}`}>
           <button className='launch-details-btn'>View launch details</button>
