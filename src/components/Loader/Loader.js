@@ -1,11 +1,9 @@
 import React, { useContext } from 'react';
 import blackhole from '../../assets/blackhole.png'
-import { DataContext } from '../../contexts/DataContext';
 import './Loader.css'
 
 
 const Loader = () => {
-  const loadingInfo = useContext(DataContext);
 
   return ( 
     <section className='loading-page'>
