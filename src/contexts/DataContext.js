@@ -22,7 +22,7 @@ const DataContextProvider = ({ children }) => {
   }, [])
 
   return (  
-    <DataContext.Provider value={{upcomingLaunches, error, setError, isLoading}}>
+    <DataContext.Provider value={{upcomingLaunches, error, setError}}>
       {upcomingLaunches && !isLoading ? children : <Loader />}
       {error ? (
         <React.Fragment>
