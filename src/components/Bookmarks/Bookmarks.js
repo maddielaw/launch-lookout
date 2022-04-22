@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { BookmarkContext } from '../../contexts/BookmarkContext';
 import SavedLaunch from '../SavedLaunch/SavedLaunch';
@@ -7,6 +7,24 @@ import './Bookmarks.css'
 
 const Bookmarks = () => {
   const bookmarkData = useContext(BookmarkContext);
+
+
+// TESTING NOTIFICATION API -- WILL NEED TO DEPLOY TO TRULY TEST SINCE ONLY WORKS OVER HTTPS PROTOCOL
+  // const showNotification = () => {
+  //   return new Notification('Go for Launch!', {
+  //     body: "You have an upcoming launch at 11:30am 4/22"
+  //   })
+  // }
+
+  // useEffect(() => {
+  //   if (Notification.permission === 'granted') {
+  //     showNotification()
+  //   } else if (Notification.permission !== 'denied') {
+  //     Notification.requestPermission().then(permission => {
+  //       return permission === 'granted' ? showNotification() : null
+  //     })
+  //   }
+  // }, [])
 
   const renderBookmarkCards = () => {
     return bookmarkData.bookmarks.map(bookmark => {
