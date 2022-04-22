@@ -3,4 +3,30 @@
   height: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+
+.astronaut-loader {
+  height: 100%;
+  margin-top: 5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.astronaut-spinning {
+  height: 5em;
+  width: 5em;
+  /* margin-top: 5em; */
+  animation: rotate 3s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
 }
