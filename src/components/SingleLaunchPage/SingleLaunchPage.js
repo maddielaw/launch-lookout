@@ -5,6 +5,7 @@ import { BookmarkContext } from '../../contexts/BookmarkContext';
 import { DataContext } from '../../contexts/DataContext';
 import LaunchDetails from '../LaunchDetails/LaunchDetails';
 import './SingleLaunchPage.css'
+import Countdown from '../Countdown/Countdown';
 
 const SingleLaunchPage = ({ id }) => {
   const allLaunchData = useContext(DataContext)
@@ -39,7 +40,10 @@ const SingleLaunchPage = ({ id }) => {
         <div className='title-text'>
           <h1 className='mission-name'>{launch.name}</h1>
           <p>{format(new Date(launch.window_start), "E. MMMM dd, yyy, p")}</p>
-          <p>Status: {launch.status.name}</p>
+          {launch.status.name !== 'Launch Successful' && <p>Status: {launch.status.name}</p>}
+        </div>
+        <div className='single-countdown-container'>
+          <Countdown date={launch.window_start} status={launch.status.name} statusDescription={launch.status.description}/>
         </div>
         <div className='title-buttons'>
           <Link to='/'>
