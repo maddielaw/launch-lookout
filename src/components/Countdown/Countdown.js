@@ -7,7 +7,6 @@ const Countdown = ({ date, status, statusDescription }) => {
 
   const [currentTime, setCurrentTime] = useState(new Date())
   const launchDate = new Date(date)
-  // const launchDate = new Date("2022-04-23T22:35:00Z")
   const isTimeUp = isBefore(launchDate, currentTime);
   let days, hours, minutes, seconds = 0
 
