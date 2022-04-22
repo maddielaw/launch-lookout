@@ -1,5 +1,6 @@
 import React, { createContext, useState, useEffect } from 'react';
 import Error from '../components/Error/Error';
+import Loader from '../components/Loader/Loader';
 import { fetchUpcomingData } from '../apiCalls';
 
 const DataContext = createContext();
@@ -22,7 +23,7 @@ const DataContextProvider = ({ children }) => {
 
   return (  
     <DataContext.Provider value={{upcomingLaunches, error, setError, isLoading}}>
-      {upcomingLaunches && children}
+      {upcomingLaunches && !isLoading ? children : <Loader />}
       {error ? (
         <React.Fragment>
           <Error />
