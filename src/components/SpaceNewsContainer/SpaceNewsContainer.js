@@ -1,13 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import './SpaceNewsContainer.css'
 import { fetchUpcomingData } from '../../apiCalls';
 import Event from '../Event/Event';
 import { format } from 'date-fns';
+import { DataContext } from '../../contexts/DataContext';
 
 
 const SpaceNewsContainer = () => {
   
   const [upcomingEvents, setUpcomingEvents] = useState(null)
+  const errorInfo = useContext(DataContext);
 
 
   const sortEvents = () => {
@@ -29,6 +31,7 @@ const SpaceNewsContainer = () => {
       .then((data) => {
         setUpcomingEvents(data.results)
       })
+      .catch(err => errorInfo.setError(true))
   }, [])
 
   return (
