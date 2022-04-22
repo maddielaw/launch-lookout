@@ -1,4 +1,6 @@
 import './LaunchDetails.css'
+import { format } from 'date-fns';
+
 
 const LaunchDetails = ({ launch }) => {
 
@@ -21,7 +23,7 @@ const LaunchDetails = ({ launch }) => {
           <h2>Launch Details</h2>
           {launch.vidURLs.length ? <a className='launch-vid' href={launch.vidURLs[0].url}>Watch live webcast</a> : null}
           <div className='launch-window'>
-            <p>Launch window start: {launch.window_start}</p>
+            <p>Launch window start: {format(new Date(launch.window_start), "E. MMMM dd, yyy, p")}</p>
             {launch.probability && <p>Launch probability: {launch.probability}%</p>}
           </div>
           <p className='rocket-type'>Rocket: {launch.rocket.configuration.full_name}</p>

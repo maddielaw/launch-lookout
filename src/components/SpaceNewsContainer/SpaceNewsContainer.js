@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './SpaceNewsContainer.css'
 import { fetchUpcomingData } from '../../apiCalls';
 import Event from '../Event/Event';
+import { format } from 'date-fns';
 
 
 const SpaceNewsContainer = () => {
@@ -17,7 +18,7 @@ const SpaceNewsContainer = () => {
         name={item.name} 
         description={item.description} 
         location={item.location} 
-        date={item.date} 
+        date={format(new Date(item.date), "E. MMMM dd, yyy, p")}
         videoLink={item.video_url}
       />
     })
