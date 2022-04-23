@@ -42,7 +42,7 @@ const Launch = ({ id, name, launchDate, company, image, mission}) => {
         {mission ? <p className='launch-mission-description'>{mission.description}</p> : <p>No mission description available at this time!</p>}
         <div className='launch-card-btn-container'>
           <Link to={`/launches/${id}`}>
-            <button>View Launch Details</button>
+            <button className='launch-details-btn'>View Launch Details</button>
           </Link>
           {isBookmarked ? <button className='bookmark-btn' disabled>Launch Bookmarked 👍</button> : <button className='bookmark-btn' onClick={() => addBookmark()}>Bookmark this Launch</button>}
         </div>
