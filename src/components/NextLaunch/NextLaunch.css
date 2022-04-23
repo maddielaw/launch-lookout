@@ -3,13 +3,33 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  height: 20vh;
-  margin-bottom: 3em;
-  margin-top: 2em;
+  height: 17vh;
+  margin-bottom: 2em;
   padding: .5em;
+  /* border-bottom: 1px solid #00DBB6;
+  border-top: 1px solid #00DBB6; */
+  background: linear-gradient(90deg, rgba(16,15,69,1) 0%, rgba(27,23,103,1) 50%, rgba(16,15,69,1) 100%);
 }
 
 .next-launch-btn-container {
   display: flex;
   justify-content: space-between;
 }
+
+.launch-details-btn,
+.bookmark-btn {
+  background-color: #594BDA;
+  border-radius: 15px;
+  font-size: 16px;
+  height: 2.5em;
+  border: none;
+  color: #E7E5FF;
+  cursor: pointer;
+}
+
+.launch-details-btn:hover,
+.bookmark-btn:hover {
+  background-color: #6F61FF;
+  border: 2px solid #01FF69;
+}
+
