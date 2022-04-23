@@ -1,11 +1,14 @@
 .launch-card {
   display: flex;
   margin: 1%;
+  border: 1px solid white;
+  border-radius: 7px;
 }
 
 .launch-img {
   height: 200px;
   width: 540px;
+  border-radius: 7px;
 }
 
 .launch-deets-container {
