@@ -34,14 +34,14 @@ const NextLaunch = () => {
 
   return (
     <section className='next-launch-section'>
-      <h2 className='next-launch-name'>Next Launch: {nextLaunch.name}</h2>
+      <h2 className='next-launch-name'>Next Launch | {nextLaunch.name}</h2>
       <p className='next-launch-date'>{format(new Date(nextLaunch.window_start), "E. MMMM dd, yyy, p")}</p>
       <Countdown date={nextLaunch.window_start} status={nextLaunch.status.name} statusDescription={nextLaunch.status.description}/>
        <div className='next-launch-btn-container'>
         <Link to={`/launches/${nextLaunch.id}`}>
           <button className='launch-details-btn'>View launch details</button>
         </Link>
-        {isBookmarked ? <button className='bookmark-btn' disabled>Launch Bookmarked 👍</button> : <button className='bookmark-btn' onClick={() => addBookmark()}>Bookmark this Launch</button>}
+        {isBookmarked ? <button className='bookmark-btn' disabled>Launch Bookmarked</button> : <button className='bookmark-btn' onClick={() => addBookmark()}>Bookmark this Launch</button>}
       </div>
     </section>
   );
