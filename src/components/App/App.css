@@ -1,6 +1,6 @@
-* {
+/* * {
   border: 1px solid aquamarine;
-}
+} */
 
 .App {
   display: flex;
@@ -12,20 +12,21 @@
   flex-direction: column;
   height: 100vh;
   width: 70%;
-  margin: .5em;
-
+  background: linear-gradient(90deg, rgba(16,15,69,1) 0%, rgba(27,23,103,1) 50%, rgba(16,15,69,1) 100%);
+  color: white;
 }
 
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 1em;
-  height: 7vh;
+  height: 10vh;
+  color: white;
+  background: linear-gradient(90deg, rgba(16,15,69,1) 0%, rgba(27,23,103,1) 50%, rgba(16,15,69,1) 100%);
 }
 
 .header {
-  font-size: 30px;
+  font-size: 40px;
 }
 
 .space-news {
@@ -33,3 +34,24 @@
   height: 100vh;
   width: 30%;
 }
+
+.header {
+  padding: 1em;
+}
+
+.bookmarks-page-btn {
+  background-color: #594BDA;
+  border-radius: 15px;
+  font-size: 16px;
+  height: 2.5em;
+  border: none;
+  color: #E7E5FF;
+  margin-right: 1.5em;
+  cursor: pointer;
+}
+
+.bookmarks-page-btn:hover {
+  background-color: #6F61FF;
+  border: 2px solid #01FF69;
+}
+
