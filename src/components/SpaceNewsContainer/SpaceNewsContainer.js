@@ -22,7 +22,7 @@ const SpaceNewsContainer = () => {
         name={item.name} 
         description={item.description} 
         location={item.location} 
-        date={format(new Date(item.date), "E. MMMM dd, yyy, p")}
+        date={format(new Date(item.date), "E. Pp")}
         videoLink={item.video_url}
       />
     })
