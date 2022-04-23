@@ -3,11 +3,15 @@
   flex-direction: column;
   margin-top: 2%;
   margin-bottom: 2%;
-  border: 1px solid white;
+  border: 1px solid #594BDA;
   justify-content: space-around;
   height: 7%;
   padding: .5em;
   border-radius: 7px;
+  background-image: url(../../assets/night-sky.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+
 }
 
 .title-date {
@@ -15,3 +19,34 @@
   justify-content: space-between;
 }
 
+.event-date {
+  font-style: italic;
+}
+
+.event-location {
+  font-style: italic;
+}
+
+.event-video-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2em;
+  width: 10em;
+  border-radius: 20px;
+  background-color: #7AF9F4;
+  margin-left: 20em;
+}
+
+.event-video-link {
+  text-decoration: none;
+  color: black;
+}
+
+.event-video-box:hover {
+  background-color: #594BDA;
+}
+
+.event-video-link:hover {
+  color: #E7E5FF;
+}
