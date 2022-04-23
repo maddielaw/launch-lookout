@@ -3,11 +3,11 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  height: 17vh;
-  margin-bottom: 2em;
+  height: 23vh;
+  margin-top: 2em;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
   padding: .5em;
-  /* border-bottom: 1px solid #00DBB6;
-  border-top: 1px solid #00DBB6; */
   background: linear-gradient(90deg, rgba(16,15,69,1) 0%, rgba(27,23,103,1) 50%, rgba(16,15,69,1) 100%);
 }
 
@@ -19,9 +19,10 @@
 .launch-details-btn,
 .bookmark-btn {
   background-color: #594BDA;
-  border-radius: 15px;
+  border-radius: 20px;
   font-size: 16px;
   height: 2.5em;
+  width: 13em;
   border: none;
   color: #E7E5FF;
   cursor: pointer;
@@ -30,6 +31,21 @@
 .launch-details-btn:hover,
 .bookmark-btn:hover {
   background-color: #6F61FF;
-  border: 2px solid #01FF69;
 }
 
+.bookmark-btn:disabled {
+  background-color: #7AF9F4;
+  color: black;
+  cursor: default;
+  /* opacity: .5; */
+}
+
+/* animation: pulse--3FSqG 1.5s cubic-bezier(.25,.46,.45,.94) infinite;
+    animation-duration: 1.5s;
+    animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    animation-name: pulse--3FSqG; */

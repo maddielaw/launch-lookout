@@ -30,7 +30,7 @@
 }
 
 .space-news {
-  padding: 10px;
+  /* padding: 10px; */
   height: 100vh;
   width: 30%;
 }
@@ -40,18 +40,20 @@
 }
 
 .bookmarks-page-btn {
-  background-color: #594BDA;
-  border-radius: 15px;
-  font-size: 16px;
-  height: 2.5em;
-  border: none;
+  /* background-color: #594BDA; */
+  background-color: #171459;
+  border: 1px solid #594BDA;
+  border-radius: 25px;
+  font-size: 18px;
+  height: 3em;
+  width: 14em;
   color: #E7E5FF;
   margin-right: 1.5em;
   cursor: pointer;
 }
 
 .bookmarks-page-btn:hover {
-  background-color: #6F61FF;
-  border: 2px solid #01FF69;
+  background-color: #241f86;
+  border: 1px solid #6F61FF;
 }
 

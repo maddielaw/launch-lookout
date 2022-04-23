@@ -1,4 +1,10 @@
 .upcoming-launches-container {
   height: 62vh;
   overflow: scroll;
+  margin-top: 3em;
+}
+
+.upcoming-header {
+  display: flex;
+  justify-content: center;
 }

@@ -3,9 +3,11 @@
   flex-direction: column;
   margin-top: 2%;
   margin-bottom: 2%;
-  border: 1px solid black;
+  border: 1px solid white;
   justify-content: space-around;
   height: 7%;
+  padding: .5em;
+  border-radius: 7px;
 }
 
 .title-date {

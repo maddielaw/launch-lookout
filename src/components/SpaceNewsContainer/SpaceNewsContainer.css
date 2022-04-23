@@ -4,6 +4,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-right: 1em;
+  background: linear-gradient(90deg, rgba(16,15,69,1) 0%, rgba(27,23,103,1) 50%, rgba(16,15,69,1) 100%);
+  color: white;
+}
+
+.events-header {
+  margin: 1em;
 }
 
 .astronaut-loader {
