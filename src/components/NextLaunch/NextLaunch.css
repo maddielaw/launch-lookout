@@ -5,10 +5,11 @@
   justify-content: space-around;
   height: 23vh;
   margin-top: 2em;
-  border-top: 1px solid #594BDA;
-  border-bottom: 1px solid #594BDA;
-  padding: .5em;
-  background: linear-gradient(90deg, rgba(16,15,69,1) 0%, rgba(27,23,103,1) 50%, rgba(16,15,69,1) 100%);
+  /* border-top: 1px solid #594BDA;
+  border-bottom: 1px solid #594BDA; */
+  padding: 1em;
+  background: linear-gradient(145deg, #18145c, #14114d);
+  box-shadow:  19px 19px 38px #100e3f,-19px -19px 38px #1c186d;
 }
 
 .next-launch-btn-container {
@@ -26,6 +27,7 @@
   border: none;
   color: #E7E5FF;
   cursor: pointer;
+  box-shadow:  19px 19px 38px #100e3e,-19px -19px 38px #1c186c;
 }
 
 .launch-details-btn:hover,
@@ -37,19 +39,8 @@
   background-color: #7AF9F4;
   color: black;
   cursor: default;
-  /* opacity: .5; */
 }
 
 .next-launch-date {
   font-style: italic;
 }
-
-/* animation: pulse--3FSqG 1.5s cubic-bezier(.25,.46,.45,.94) infinite;
-    animation-duration: 1.5s;
-    animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    animation-delay: 0s;
-    animation-iteration-count: infinite;
-    animation-direction: normal;
-    animation-fill-mode: none;
-    animation-play-state: running;
-    animation-name: pulse--3FSqG; */

@@ -17,6 +17,13 @@
   padding: 1em;
 }
 
+.mission-patch-img {
+  border-radius: 20px;
+  max-width:90%;
+  max-height: 100%;
+  box-shadow:  19px 19px 38px #100e3f,-19px -19px 38px #1c186d;
+}
+
 .mission-description {
   display: flex;
   flex-direction: column;

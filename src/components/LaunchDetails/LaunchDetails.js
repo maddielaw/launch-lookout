@@ -9,7 +9,7 @@ const LaunchDetails = ({ launch }) => {
       <div className='mission-div'>
         <div className='mission-patch'>
           {launch.mission_patches.length ? <img className='mission-patch-img' src={launch.mission_patches[0].image_url} alt='Mission patch' /> : <img className='mission-patch-img' alt='Rocket lifting off against bright blue sky'src={'https://images.unsplash.com/photo-1580551730007-11f498ebb39d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1501&q=80'}/>}
-          </div>
+        </div>
         <div className='mission-description'>
           <h2>Mission Details</h2>
           {launch.mission ? <p className='description'>{launch.mission.description}</p> : <p>No mission details available yet for this launch. Please check back later!</p>}
