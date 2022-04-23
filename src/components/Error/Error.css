@@ -1,0 +1,25 @@
+.error-page {
+  height: 100vh;
+  width: 100%;
+}
+
+.error-nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  height: 13%;
+  padding: 1em;
+}
+
+.error-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 77%;
+  padding: 1em;
+}
+
+.error-text h1 {
+  font-size: 35px;
+  margin-bottom: 2em;
+}

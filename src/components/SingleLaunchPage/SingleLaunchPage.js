@@ -16,12 +16,13 @@ const SingleLaunchPage = ({ id }) => {
   const [isBookmarked, setIsBookmarked] = useState(false);
 
   const addBookmark = () => {
+    const checkedMission = launch.mission ? launch.mission.description : "No mission description available at this time!"
     const newLaunch = {
       id: id, 
       name: launch.name, 
       company: launch.launch_service_provider.name, 
       image: launch.image,
-      mission: launch.mission.description,
+      mission: checkedMission,
       launchDate: format(new Date(launch.window_start), "E. MMMM dd, yyy, p")
     }
     bookmarkData.setBookmarks([...bookmarkData.bookmarks, newLaunch])

@@ -1,9 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './SavedLaunch.css'
 
 const SavedLaunch = ({id, name, company, image, mission, launchDate, removeBookmark}) => {
-
   return (
     <section className='saved-launch-card'>
       <div className='date-delete'>
