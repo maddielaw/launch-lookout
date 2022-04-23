@@ -5,8 +5,8 @@
   justify-content: space-around;
   height: 23vh;
   margin-top: 2em;
-  border-top: 1px solid white;
-  border-bottom: 1px solid white;
+  border-top: 1px solid #594BDA;
+  border-bottom: 1px solid #594BDA;
   padding: .5em;
   background: linear-gradient(90deg, rgba(16,15,69,1) 0%, rgba(27,23,103,1) 50%, rgba(16,15,69,1) 100%);
 }
@@ -38,6 +38,10 @@
   color: black;
   cursor: default;
   /* opacity: .5; */
+}
+
+.next-launch-date {
+  font-style: italic;
 }
 
 /* animation: pulse--3FSqG 1.5s cubic-bezier(.25,.46,.45,.94) infinite;
