@@ -5,6 +5,8 @@ import { DataContext } from '../../contexts/DataContext';
 import { format } from 'date-fns';
 import './NextLaunch.css'
 import Countdown from '../Countdown/Countdown';
+import {IoCheckmarkOutline} from "react-icons/io5";
+
 
 const NextLaunch = () => {
   const launchInfo = useContext(DataContext)
@@ -14,12 +16,13 @@ const NextLaunch = () => {
   const [isBookmarked, setIsBookmarked] = useState(false);
 
   const addBookmark = () => {
+    const checkedMission = nextLaunch.mission ? nextLaunch.mission.description : "No mission description available at this time!"
     const newLaunch = {
       id: nextLaunch.id, 
       name: nextLaunch.name, 
       company: nextLaunch.launch_service_provider.name, 
       image: nextLaunch.image,
-      mission: nextLaunch.mission.description,
+      mission: checkedMission,
       launchDate: format(new Date(nextLaunch.window_start), "E. MMMM dd, yyy, p")
     }
     bookmarkData.setBookmarks([...bookmarkData.bookmarks, newLaunch])
@@ -41,7 +44,7 @@ const NextLaunch = () => {
         <Link to={`/launches/${nextLaunch.id}`}>
           <button className='launch-details-btn'>View launch details</button>
         </Link>
-        {isBookmarked ? <button className='bookmark-btn' disabled>Launch Bookmarked</button> : <button className='bookmark-btn' onClick={() => addBookmark()}>Bookmark this Launch</button>}
+        {isBookmarked ? <button className='bookmark-btn bookmarked' disabled><IoCheckmarkOutline className='check-icon'/>Launch Bookmarked</button> : <button className='bookmark-btn' onClick={() => addBookmark()}>Bookmark this Launch</button>}
       </div>
     </section>
   );
