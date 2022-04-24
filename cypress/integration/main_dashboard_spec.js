@@ -102,7 +102,7 @@ describe('Main dashboard flow', () => {
     cy.intercept('GET', 'https://spacelaunchnow.me/api/ll/2.2.0/launch/upcoming/?limit=20&mode=detailed', upcomingLaunches()).as('getLaunches')
     cy.intercept('GET', 'https://spacelaunchnow.me/api/ll/2.2.0/event/upcoming/?limit=20&mode=detailed', upcomingEvents()).as('getEvents')
     cy.visit('http://localhost:3000/')
-    .get('.events-header').contains('Upcoming Events in Spaceflight')
+    .get('.events-header').contains('Upcoming Spaceflight Events')
     .get('.events-container').find('.event-card').should('have.length', 2)
   })
 
