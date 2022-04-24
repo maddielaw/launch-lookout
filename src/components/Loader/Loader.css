@@ -9,6 +9,10 @@
   background: linear-gradient(90deg, rgba(16,15,69,1) 0%, rgba(27,23,103,1) 50%, rgba(16,15,69,1) 100%);
 }
 
+.loading-header {
+  font-size: 40px;
+}
+
 .blackhole-spinning {
   height: 10em;
   width: 10em;

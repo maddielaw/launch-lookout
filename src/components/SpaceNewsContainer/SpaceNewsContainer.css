@@ -22,6 +22,10 @@
   align-items: center;
 }
 
+.events-loader-text {
+  font-size: 30px;
+}
+
 .astronaut-spinning {
   height: 5em;
   width: 5em;

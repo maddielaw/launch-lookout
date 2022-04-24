@@ -31,6 +31,11 @@
 
 .launch-date  {
   font-style: italic;
+  color: #594BDA;
+}
+
+.launch-name {
+  font-size: 27px;
 }
 
 .img-company-container {
@@ -38,4 +43,5 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: #594BDA;
 }

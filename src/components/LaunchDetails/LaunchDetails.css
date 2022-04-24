@@ -55,7 +55,7 @@
   height: 100%;
   border-left: 8px solid #594BDA;
   padding-left: 1em;
-  background-color: #131038;
+  background: linear-gradient(145deg, #15113c, #120e32);
   background-image: url(../../assets/night-sky.jpg);
   border-top-right-radius: 50px;
   border-bottom-right-radius: 50px;

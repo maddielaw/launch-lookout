@@ -22,10 +22,16 @@
 
 .event-date {
   font-style: italic;
+  color: #7AF9F4;
+}
+
+.event-name {
+  font-size: 23px;
 }
 
 .event-location {
   font-style: italic;
+  color: #7AF9F4;
 }
 
 .event-video-box {

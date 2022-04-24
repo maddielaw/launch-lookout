@@ -28,20 +28,21 @@
 }
 
 .to-bookmarks {
-  background-color: #594BDA;
+  background-color: #171459;
+  border: 1px solid #594BDA;
   border-radius: 20px;
   font-size: 16px;
   height: 2.5em;
-  width: 8em;
-  border: none;
-  color: white;
+  width: 8.5em;
+  color: #E7E5FF;
   cursor: pointer;
   box-shadow:  19px 19px 38px #100e3e,-19px -19px 38px #1c186c;
 }
 
 .back-to-main {
   background-color: #594BDA;
-  height: 2.6em;
+  height: 2.7em;
+  width: 2.7em;
   border: none;
   border-radius: 50px;
   cursor: pointer;
@@ -83,7 +84,17 @@
 }
 
 .single-countdown-container p {
-  font-size: 38px;
+  font-size: 35px;
+}
+
+.single-countdown-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(145deg, #15113c, #120e32);
+  border-radius: 50px;
+  width: 43%;
+  box-shadow:  19px 19px 38px #100e3e,-19px -19px 38px #1c186c;
 }
 
 .bookmarked {
