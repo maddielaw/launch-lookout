@@ -9,6 +9,7 @@ import SingleLaunchPage from '../SingleLaunchPage/SingleLaunchPage';
 import SpaceNewsContainer from '../SpaceNewsContainer/SpaceNewsContainer';
 import UpcomingLaunches from '../UpcomingLaunches/UpcomingLaunches';
 import './App.css';
+import {IoIosRocket} from 'react-icons/io'
 
 
 const App = () => {
@@ -22,7 +23,7 @@ const App = () => {
             <Route exact path='/'>
               <section className='main-section'>
                 <nav className='nav'>
-                  <h1 className='header'>Launch Lookout</h1>
+                  <h1 className='header'><IoIosRocket/>Launch Lookout</h1>
                   <Link to='/bookmarks'><button className='bookmarks-page-btn'>My Bookmarked Launches</button></Link>
                 </nav>
                   <NextLaunch />
