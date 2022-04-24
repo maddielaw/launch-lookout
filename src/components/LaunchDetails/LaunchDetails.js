@@ -32,8 +32,7 @@ const LaunchDetails = ({ launch }) => {
           {launch.vidURLs.length ? 
             <div className='launch-vid-container'>
               <a className='launch-vid' href={launch.vidURLs[0].url}>Watch live webcast</a>
-            </div> : null
-          }
+            </div> : null}
           <div className='launch-window'>
             <p>Launch window start: {format(new Date(launch.window_start), "E. MMMM dd, yyy, p")}</p>
             {launch.status.abbrev === 'TBD' && <p className='placeholder-status'>Current launch date is a placeholder. Check back later for confirmed liftoff date and time.</p>}
