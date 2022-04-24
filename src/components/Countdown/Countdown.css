@@ -1,6 +1,7 @@
 .countdown-container {
   display: flex;
   justify-content: center;
+  align-items: center;
   height: 5em;
   width: 100%;
   padding: .5em;
@@ -19,6 +20,7 @@
 .countdown-timer {
   display: flex;
   font-size: 45px;
+  border-radius: 50px;
 }
 
 .separator {
@@ -27,4 +29,3 @@
   width: 1em;
   color: #7AF9F4;
 }
-
