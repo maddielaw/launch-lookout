@@ -40,7 +40,7 @@ const Launch = ({ id, name, launchDate, company, image, mission}) => {
       </div>
       <div className='launch-deets-container'>
         <p className='launch-date'>{format(new Date(launchDate), "E. MMMM dd, yyy, p")}</p>
-        <h3>{name}</h3>
+        <h3 className='launch-name'>{name}</h3>
         {mission ? <p className='launch-mission-description'>{mission.description}</p> : <p>No mission description available at this time!</p>}
         <div className='launch-card-btn-container'>
           <Link to={`/launches/${id}`}>

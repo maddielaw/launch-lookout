@@ -40,11 +40,11 @@ const SpaceNewsContainer = () => {
 
   return (
     <section className='events-section'>
-      <h2 className='events-header'>Upcoming Events in Spaceflight</h2>
+      <h2 className='events-header'>Upcoming Spaceflight Events</h2>
         <div className='events-container'>
           {upcomingEvents && !isEventLoading ? sortEvents() :
           <div className='astronaut-loader'>
-            <h3>Events loading...</h3>
+            <h3 className='events-loader-text'>Events loading . . .</h3>
             <img className='astronaut-spinning' src={astronaut} alt={'astronaut spinning loading'}></img>
           </div>
           }
