@@ -4,6 +4,8 @@ import { useState, useEffect } from 'react';
 import { format } from 'date-fns';
 import { BookmarkContext } from '../../contexts/BookmarkContext';
 import './Launch.css'
+import {IoCheckmarkOutline} from "react-icons/io5";
+
 
 
 const Launch = ({ id, name, launchDate, company, image, mission}) => {
@@ -44,7 +46,7 @@ const Launch = ({ id, name, launchDate, company, image, mission}) => {
           <Link to={`/launches/${id}`}>
             <button className='launch-details-btn'>View Launch Details</button>
           </Link>
-          {isBookmarked ? <button className='bookmark-btn' disabled>Launch Bookmarked </button> : <button className='bookmark-btn' onClick={() => addBookmark()}>Bookmark this Launch</button>}
+          {isBookmarked ? <button className='bookmark-btn bookmarked' disabled><IoCheckmarkOutline className='check-icon'/>Launch Bookmarked </button> : <button className='bookmark-btn' onClick={() => addBookmark()}>Bookmark this Launch</button>}
         </div>
       </div>
 
