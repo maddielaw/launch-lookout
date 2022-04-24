@@ -1,9 +1,11 @@
 .launch-card {
   display: flex;
   margin: 1%;
-  border: 1px solid #594BDA;
   border-radius: 20px;
   padding: 1em;
+  color: white;
+  background-color: #131038;
+  background-image: url(../../assets/night-sky.jpg);
   box-shadow:  19px 19px 38px #100e3f,-19px -19px 38px #1c186d;
 }
 
@@ -11,7 +13,6 @@
   height: 200px;
   width: 540px;
   border-radius: 7px;
-  box-shadow:  19px 19px 38px #100e3f,-19px -19px 38px #1c186d;
 }
 
 .launch-deets-container {
@@ -30,4 +31,11 @@
 
 .launch-date  {
   font-style: italic;
+}
+
+.img-company-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

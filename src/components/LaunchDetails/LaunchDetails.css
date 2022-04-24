@@ -2,11 +2,17 @@
   display: flex;
   flex-direction: column;
   height: 80vh;
+  border-top: 1px solid #594BDA;
 }
 
 .mission-div {
   display: flex;
   height: 50%;
+}
+
+.mission-details-header,
+.launch-details-header {
+  font-size: 30px;
 }
 
 .mission-patch {
@@ -32,10 +38,45 @@
   padding: 1em;
 }
 
+.mission-details-header {
+  display: flex;
+  align-items: center;
+  margin-left: .5em;
+}
+
+.shuttle-icon {
+  margin-right: .5em;
+}
+
+.mission-text-style {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+  border-left: 8px solid #594BDA;
+  padding-left: 1em;
+  background-color: #131038;
+  background-image: url(../../assets/night-sky.jpg);
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+.description,
+.orbit,
+.mission-type,
+.launch-provider-name {
+  font-size: 19px;
+}
+
+.launch-provider-description {
+  font-style: italic;
+}
+
 .launch-div {
   display: flex;
   height: 60%;
   width: 100vw;
+  border-top: 1px solid #594BDA;
 }
 
 .launch-details {
@@ -46,9 +87,14 @@
   width: 80em;
 }
 
-.launch-window {
-  display: flex;
-  justify-content: space-around;
+.launch-window,
+.rocket-type,
+.launch-location {
+  font-size: 19px
+}
+
+.rocket-description {
+  font-style: italic;
 }
 
 .map {
@@ -60,7 +106,36 @@
 .map-img {
   height: 24em;
   width: 52em;
+  border-radius: 50px;
+  padding: 1em;
 }
+
+.launch-vid-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2.5em;
+  width: 13em;
+  border-radius: 20px;
+  background-color: #7AF9F4;
+  box-shadow:  19px 19px 38px #100e3f,-19px -19px 38px #1c186d;
+
+}
+
+.launch-vid {
+  text-decoration: none;
+  color: black;
+}
+
+.launch-vid-container:hover {
+  background-color: #594BDA;
+  color: white;
+}
+
+.launch-vid:hover {
+  color: #E7E5FF;
+}
+
 
 
 

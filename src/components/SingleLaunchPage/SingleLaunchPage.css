@@ -9,6 +9,7 @@
 .titles-div {
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
   padding: 1em;
 }
 
@@ -16,5 +17,69 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.routing-btns {
+  display: flex;
   justify-content: space-around;
+  width: 110%;
+}
+
+.to-bookmarks {
+  background-color: #594BDA;
+  border-radius: 20px;
+  font-size: 16px;
+  height: 2.5em;
+  width: 8em;
+  border: none;
+  color: white;
+  cursor: pointer;
+  box-shadow:  19px 19px 38px #100e3e,-19px -19px 38px #1c186c;
+}
+
+.back-to-main {
+  background-color: #594BDA;
+  height: 2.6em;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow:  19px 19px 38px #100e3e,-19px -19px 38px #1c186c;
+}
+
+.back-icon {
+  color: white;
+  font-size: 2.1em;
+}
+
+.to-bookmarks:hover,
+.back-to-main:hover {
+  background-color: #6F61FF;
+}
+
+.mission-name {
+  font-size: 30px;
+}
+
+.single-launch-date {
+  font-style: italic;
+}
+
+.launch-status {
+  font-size: 20px;
+}
+
+.single-countdown-container p {
+  font-size: 38px;
+}
+
+.bookmarked {
+  display: flex;
+  align-items: center;
+}
+
+.check-icon {
+  font-size: 25px;
+  margin: .2em;
 }
