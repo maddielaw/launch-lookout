@@ -7,6 +7,7 @@ import LaunchDetails from '../LaunchDetails/LaunchDetails';
 import './SingleLaunchPage.css'
 import Countdown from '../Countdown/Countdown';
 import {IoChevronBackOutline, IoCheckmarkOutline} from "react-icons/io5";
+import {FaCircle} from 'react-icons/fa'
 
 
 const SingleLaunchPage = ({ id }) => {
@@ -43,10 +44,13 @@ const SingleLaunchPage = ({ id }) => {
         <div className='title-text'>
           <h1 className='mission-name'>{launch.name}</h1>
           <p className='single-launch-date'>{format(new Date(launch.window_start), "E. MMMM dd, yyy, p")}</p>
-          {launch.status.name !== 'Launch Successful' && <p className='launch-status'>Status: {launch.status.name}</p>}
+          {launch.status.name !== 'Launch Successful' && 
+            <p className='launch-status'><FaCircle className={launch.status.name === 'Go for Launch' ? 'go-status' : 'yellow-status'}/>{launch.status.name}</p>}
         </div>
         <div className='single-countdown-container'>
-          <Countdown date={launch.window_start} status={launch.status.name} statusDescription={launch.status.description}/>
+          {launch.status.abbrev !== 'TBD' && 
+            <Countdown date={launch.window_start} status={launch.status.name} statusDescription={launch.status.description}/>
+          }
         </div>
         <div className='title-buttons'>
           <div className='routing-btns'>
