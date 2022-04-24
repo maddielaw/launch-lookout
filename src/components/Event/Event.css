@@ -3,12 +3,13 @@
   flex-direction: column;
   margin-top: 2%;
   margin-bottom: 2%;
-  border: 1px solid #594BDA;
+  border: 1px solid #7AF9F4;
   justify-content: space-around;
   height: 7%;
   padding: .5em;
   border-radius: 20px;
-  background-image: url(../../assets/night-sky.jpg);
+  background-color: #131038;
+  background-image: url(../../assets/plain-star-background.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 
