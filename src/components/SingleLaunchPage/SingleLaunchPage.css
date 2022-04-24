@@ -68,6 +68,18 @@
 
 .launch-status {
   font-size: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.go-status {
+  margin-right: 1em;
+  color: #01FD61;
+}
+
+.yellow-status {
+  margin-right: 1em;
+  color: #DDE21F;
 }
 
 .single-countdown-container p {
