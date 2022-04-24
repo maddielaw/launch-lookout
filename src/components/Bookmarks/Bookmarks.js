@@ -30,7 +30,7 @@ const Bookmarks = () => {
       <div className="bookmark-header">
         <h1 className="bookmark-header-text">My Bookmarked Launches</h1>
         <Link to="/">
-          <button className="back-to-main">
+          <button className="back-to-main" aria-label='Back To Main Dashboard'>
             <IoChevronBackOutline className="back-icon" />
           </button>
         </Link>
