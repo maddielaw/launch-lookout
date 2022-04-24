@@ -1,6 +1,7 @@
 import './LaunchDetails.css'
 import { format } from 'date-fns';
 import {FaSpaceShuttle} from 'react-icons/fa'
+import {GiSpaceShuttle} from 'react-icons/gi'
 
 
 
@@ -15,9 +16,9 @@ const LaunchDetails = ({ launch }) => {
         <div className='mission-description'>
           <h2 className='mission-details-header'><FaSpaceShuttle className='shuttle-icon'/>Mission Details</h2>
             <div className='mission-text-style'>
-              {launch.mission ? <p className='description'>{launch.mission.description}</p> : <p>No mission details available yet for this launch. Please check back later!</p>}
-              {launch.mission ? <p className='orbit'>Destination: {launch.mission.orbit.name}</p> : <p>Destination: Orbit information is not available for this launch.</p> }          
-              {launch.mission ? <p className='mission-type'>Mission type: {launch.mission.type}</p> : <p>Mission type: Mission type is not available for this launch.</p>}
+              {launch.mission ? <p className='description'>{launch.mission.description}</p> : <p className='description'>No mission details available yet for this launch. Please check back later!</p>}
+              {launch.mission ? <p className='orbit'>Destination: {launch.mission.orbit.name}</p> : <p className='orbit'>Destination: Orbit information is not available for this launch.</p> }          
+              {launch.mission ? <p className='mission-type'>Mission type: {launch.mission.type}</p> : <p className='mission-type'>Mission type: Mission type is not available for this launch.</p>}
               <div className='launch-provider-details'>
                 <p className='launch-provider-name'>{launch.launch_service_provider.name}</p>
                 <p className='launch-provider-description'>{launch.launch_service_provider.description}</p>
@@ -35,12 +36,13 @@ const LaunchDetails = ({ launch }) => {
           }
           <div className='launch-window'>
             <p>Launch window start: {format(new Date(launch.window_start), "E. MMMM dd, yyy, p")}</p>
+            {launch.status.abbrev === 'TBD' && <p className='placeholder-status'>Current launch date is a placeholder. Check back later for confirmed liftoff date and time.</p>}
           </div>
           <div className='rocket-details'>
             <p className='rocket-type'>Rocket: {launch.rocket.configuration.full_name}</p>
             <p className='rocket-description'>{launch.rocket.configuration.description}</p>
           </div>
-          <p className='launch-location'>Launching from: {launch.pad.name} {launch.pad.location.name}</p>
+          <p className='launch-location'><GiSpaceShuttle className='shuttle-icon'/>Launching from: {launch.pad.name} {launch.pad.location.name}</p>
         </div>
         <div className='map'>
           <img className='map-img' alt='Launch pad location on a map'src={launch.pad.map_image} />
