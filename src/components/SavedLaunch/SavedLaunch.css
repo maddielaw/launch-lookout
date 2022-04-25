@@ -82,6 +82,13 @@
 }
 
 
+@media screen and (max-width: 425px) {
+  .launch-details-btn {
+    font-size: 15px;
+    width: 14em;
+  }
+}
+
 @media screen and (max-width: 375px) {
   .saved-launch-date {
     font-size: 15px;

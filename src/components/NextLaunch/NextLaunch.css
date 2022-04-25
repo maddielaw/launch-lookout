@@ -72,9 +72,11 @@
   .next-launch-date {
     font-size: 15px;
   }
+  
   .launch-details-btn,
   .bookmark-btn {
     font-size: 13px;
+    width: 10em;
   }
 }
 
