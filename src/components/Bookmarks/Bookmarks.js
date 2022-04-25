@@ -1,57 +1,49 @@
-import React, { useContext, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { BookmarkContext } from '../../contexts/BookmarkContext';
-import SavedLaunch from '../SavedLaunch/SavedLaunch';
-import './Bookmarks.css'
-
+import React, { useContext } from "react";
+import { Link } from "react-router-dom";
+import { BookmarkContext } from "../../contexts/BookmarkContext";
+import SavedLaunch from "../SavedLaunch/SavedLaunch";
+import "./Bookmarks.css";
+import { IoChevronBackOutline } from "react-icons/io5";
 
 const Bookmarks = () => {
   const bookmarkData = useContext(BookmarkContext);
 
-
-// TESTING NOTIFICATION API -- WILL NEED TO DEPLOY TO TRULY TEST SINCE ONLY WORKS OVER HTTPS PROTOCOL
-  // const showNotification = () => {
-  //   return new Notification('Go for Launch!', {
-  //     body: "You have an upcoming launch at 11:30am 4/22"
-  //   })
-  // }
-
-  // useEffect(() => {
-  //   if (Notification.permission === 'granted') {
-  //     showNotification()
-  //   } else if (Notification.permission !== 'denied') {
-  //     Notification.requestPermission().then(permission => {
-  //       return permission === 'granted' ? showNotification() : null
-  //     })
-  //   }
-  // }, [])
-
   const renderBookmarkCards = () => {
-    return bookmarkData.bookmarks.map(bookmark => {
-      return <SavedLaunch 
-        id={bookmark.id} 
-        key={bookmark.id} 
-        name={bookmark.name} 
-        company={bookmark.company} 
-        image={bookmark.image} 
-        mission={bookmark.mission}
-        launchDate={bookmark.launchDate} 
-        removeBookmark={bookmarkData.removeBookmark}
-      />
-    })
-  }
+    return bookmarkData.bookmarks.map((bookmark) => {
+      return (
+        <SavedLaunch
+          id={bookmark.id}
+          key={bookmark.id}
+          name={bookmark.name}
+          company={bookmark.company}
+          image={bookmark.image}
+          mission={bookmark.mission}
+          launchDate={bookmark.launchDate}
+          removeBookmark={bookmarkData.removeBookmark}
+        />
+      );
+    });
+  };
 
   return (
-    <section className='bookmark-section'>
-      <div className='bookmark-header'>
-        <h1>🚀 My Bookmarked Launches</h1>
-        <Link to='/'><button className='back-to-main'>X</button></Link>
+    <section className="bookmark-section">
+      <div className="bookmark-header">
+        <h1 className="bookmark-header-text">My Bookmarked Launches</h1>
+        <Link to="/">
+          <button className="back-to-main" aria-label='Back To Main Dashboard'>
+            <IoChevronBackOutline className="back-icon" />
+          </button>
+        </Link>
       </div>
-      <div className='bookmark-container'>
-        {bookmarkData.bookmarks.length ? renderBookmarkCards() : "No launches bookmarked yet!"}
+      <div className="bookmark-container">
+        {bookmarkData.bookmarks.length ? (
+          renderBookmarkCards()
+        ) : (
+          <h2 className="no-launches">No launches bookmarked yet!</h2>
+        )}
       </div>
     </section>
   );
-}
- 
+};
+
 export default Bookmarks;

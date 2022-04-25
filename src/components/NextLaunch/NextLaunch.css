@@ -3,13 +3,85 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  height: 20vh;
-  margin-bottom: 3em;
+  height: 23vh;
   margin-top: 2em;
-  padding: .5em;
+  padding: 1em;
+  background: linear-gradient(145deg, #18145c, #14114d);
+  box-shadow:  19px 19px 38px #100e3f,-19px -19px 38px #1c186d;
 }
 
 .next-launch-btn-container {
   display: flex;
   justify-content: space-between;
 }
+
+.launch-details-btn,
+.bookmark-btn {
+  background-color: #594BDA;
+  border-radius: 20px;
+  font-size: 13px;
+  height: 2.5em;
+  width: 15em;
+  border: none;
+  color: #E7E5FF;
+  cursor: pointer;
+  box-shadow:  19px 19px 38px #100e3e,-19px -19px 38px #1c186c;
+}
+
+.launch-details-btn:hover,
+.bookmark-btn:hover {
+  background-color: #6F61FF;
+}
+
+.bookmark-btn:disabled {
+  background-color: #7AF9F4;
+  color: black;
+  cursor: default;
+}
+
+.next-launch-date {
+  font-style: italic;
+  font-size: 15px;
+  color: #594BDA;
+}
+
+.next-launch-name {
+  font-size: 20px;
+}
+
+
+@media screen and (max-width: 1000px) {
+  .next-launch-name {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 915px) {
+  .next-launch-name {
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .next-launch-name {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .next-launch-date {
+    font-size: 15px;
+  }
+  .launch-details-btn,
+  .bookmark-btn {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .launch-details-btn,
+  .bookmark-btn {
+    font-size: 10px;
+  }
+}
+

@@ -1,20 +1,55 @@
 .saved-launch-card {
-  padding: .5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   height: 100%;
-  width: 80%;
+  width: 87%;
+  background: linear-gradient(145deg, #15113c, #120e32);
+  border-radius: 20px;
+  box-shadow:  21px 21px 43px #100d2d,-21px -21px 43px #181343;
 }
 
 .date-delete {
   display: flex;
   justify-content: space-between;
-  height: 7%;
+  align-items: center;
+  height: 8%;
+  margin-bottom: .5em;
+  padding: 1em;
+  color: #594BDA;
+}
+
+.saved-launch-date {
+  font-size: 15px;
+  font-style: italic;
+}
+
+.saved-name {
+  font-size: 20px;
+}
+
+.saved-mission {
+  font-size: 15px;
+}
+
+.saved-img-container {
+  width: 100%;
+  margin: 0;
+}
+
+.saved-launch-img {
+  height: 240px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
 }
 
 .saved-launch-details-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* height: 47%; */
+  height: 40%;
+  padding: 1em;
 }
 
 .saved-launch-details {
@@ -26,15 +61,39 @@
   margin-bottom: 1em;
 }
 
-.saved-img-container {
-  margin: 0;
-  width: 100%;
-  height: 90%;
-  margin-bottom: 1em;
+.remove-bookmark-btn {
+  background-color: #171459;
+  border: 1px solid #594BDA;
+  border-radius: 20px;
+  font-size: 16px;
+  height: 2em;
+  width: 2em;
+  color: #E7E5FF;
+  cursor: pointer;
 }
 
-.saved-launch-img {
-  height: 250px;
-  width: 100%;
-  /* object-fit: cover; */
+.remove-bookmark-btn:hover {
+  background-color: #241f86;
+  border: 1px solid #6F61FF;
 }
+
+.saved-company {
+  color: #594BDA;
+}
+
+
+@media screen and (max-width: 375px) {
+  .saved-launch-date {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .saved-launch-date {
+    font-size: 15px;
+  }
+  .saved-name {
+    font-size: 20px;
+  }
+}
+

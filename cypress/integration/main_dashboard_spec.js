@@ -69,7 +69,7 @@ describe('Main dashboard flow', () => {
     cy.intercept('GET', 'https://spacelaunchnow.me/api/ll/2.2.0/event/upcoming/?limit=20&mode=detailed', upcomingEvents()).as('getEvents')
     cy.visit('http://localhost:3000/')
     cy.wait(2000)
-    .get('.header').contains('🔭 Launch Lookout')
+    .get('.header').contains('Launch Lookout')
     .get('button').contains('My Bookmarked Launches')
 });
 
@@ -78,7 +78,7 @@ describe('Main dashboard flow', () => {
     cy.intercept('GET', 'https://spacelaunchnow.me/api/ll/2.2.0/launch/upcoming/?limit=20&mode=detailed', upcomingLaunches()).as('getLaunches')
     cy.intercept('GET', 'https://spacelaunchnow.me/api/ll/2.2.0/event/upcoming/?limit=20&mode=detailed', upcomingEvents()).as('getEvents')
     cy.visit('http://localhost:3000/')
-    .get('.next-launch-name').contains('Next Launch: Falcon 9 Block 5 | Starlink Group 4-14')
+    .get('.next-launch-name').contains('Next Launch | Falcon 9 Block 5 | Starlink Group 4-14')
     .get('.next-launch-date').contains('Thu. April 21, 2022, 9:16 AM')
   })
 
@@ -102,7 +102,7 @@ describe('Main dashboard flow', () => {
     cy.intercept('GET', 'https://spacelaunchnow.me/api/ll/2.2.0/launch/upcoming/?limit=20&mode=detailed', upcomingLaunches()).as('getLaunches')
     cy.intercept('GET', 'https://spacelaunchnow.me/api/ll/2.2.0/event/upcoming/?limit=20&mode=detailed', upcomingEvents()).as('getEvents')
     cy.visit('http://localhost:3000/')
-    .get('.events-header').contains('Upcoming Events in Spaceflight')
+    .get('.events-header').contains('Upcoming Spaceflight Events')
     .get('.events-container').find('.event-card').should('have.length', 2)
   })
 
@@ -120,9 +120,9 @@ describe('Main dashboard flow', () => {
     cy.intercept('GET', 'https://spacelaunchnow.me/api/ll/2.2.0/event/upcoming/?limit=20&mode=detailed', upcomingEvents()).as('getEvents')
     cy.visit('http://localhost:3000/')
     .get('.next-launch-section').find('.bookmark-btn').click()
-    .contains('Launch Bookmarked 👍')
+    .contains('Launch Bookmarked')
     .get('.launch-card').first().find('.bookmark-btn').click()
-    .contains('Launch Bookmarked 👍')
+    .contains('Launch Bookmarked')
   })
 
   it('should show the user an error message when there are 4xx errors', () => {

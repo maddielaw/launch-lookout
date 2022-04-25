@@ -1,31 +1,29 @@
 import React, { useState, useEffect } from 'react';
 import { intervalToDuration, isBefore } from 'date-fns';
-import './Countdown.css'
-
+import './Countdown.css';
 
 const Countdown = ({ date, status, statusDescription }) => {
-
-  const [currentTime, setCurrentTime] = useState(new Date())
-  const launchDate = new Date(date)
+  const [currentTime, setCurrentTime] = useState(new Date());
+  const launchDate = new Date(date);
   const isTimeUp = isBefore(launchDate, currentTime);
-  let days, hours, minutes, seconds = 0
+  let days, hours, minutes, seconds = 0;
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentTime(new Date())
-    }, 1000)
+      setCurrentTime(new Date());
+    }, 1000);
     return () => {
-      clearInterval(interval)
-    }
-  }, [])
+      clearInterval(interval);
+    };
+  }, []);
 
   if (!isTimeUp) {
-    const duration = intervalToDuration({start: currentTime, end: launchDate})
+    const duration = intervalToDuration({start: currentTime, end: launchDate});
     days = duration.days;
     hours = duration.hours;
     minutes = duration.minutes;
-    seconds = duration.seconds
-  } 
+    seconds = duration.seconds;
+  };
 
   return (  
     <section className='countdown-container'>
@@ -46,6 +44,6 @@ const Countdown = ({ date, status, statusDescription }) => {
       }
     </section>
   );
-}
+};
  
 export default Countdown;

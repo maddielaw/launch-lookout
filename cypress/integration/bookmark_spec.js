@@ -70,7 +70,7 @@ describe('Bookmark flow', () => {
     cy.visit('http://localhost:3000/')
       .get('.bookmarks-page-btn').click()
       .url().should('eq', 'http://localhost:3000/bookmarks')
-      .get('h1').contains('🚀 My Bookmarked Launches')
+      .get('h1').contains('My Bookmarked Launches')
       .get('.bookmark-container').contains('No launches bookmarked yet!')
 });
 

@@ -1,22 +1,100 @@
 .launch-card {
   display: flex;
   margin: 1%;
+  border-radius: 20px;
+  padding: 1em;
+  color: white;
+  background-color: #131038;
+  background-image: url(../../assets/night-sky.jpg);
+  box-shadow:  19px 19px 38px #100e3f,-19px -19px 38px #1c186d;
 }
 
 .launch-img {
   height: 200px;
   width: 540px;
+  border-radius: 7px;
 }
 
 .launch-deets-container {
   display: flex;
   flex-direction: column;
-  padding: 5px;
   width: 100%;
+  padding: 1em;
 }
 
 .launch-card-btn-container {
   display: flex;
   justify-content: space-between;
   margin-top: 8%;
+  width: 100%;
+}
+
+.launch-date  {
+  font-style: italic;
+  color: #594BDA;
+  font-size: 13px;
+}
+
+.launch-name {
+  font-size: 20px;
+}
+
+.img-company-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #594BDA;
+}
+
+
+@media screen and (max-width: 1130px) {
+  .launch-card-btn-container button {
+    width: 13em;
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .launch-card-btn-container button {
+    width: 13em;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .launch-card-btn-container button {
+    width: 12em;
+  }
+}
+
+@media screen and (max-width: 915px) {
+  .launch-card-btn-container button {
+    width: 12em;
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 665px) {
+  .launch-card-btn-container button {
+    width: 13em;
+    font-size: 10px;
+  }
+  .launch-name {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .launch-card-btn-container button {
+    width: 10em;
+    font-size: 12px;
+    height: 3.2em;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .launch-card {
+    flex-direction: column;
+  }
 }
