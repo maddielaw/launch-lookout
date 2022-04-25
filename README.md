@@ -1,70 +1,101 @@
-# Getting Started with Create React App
+# Launch Lookout 🚀
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Screen Shot 2022-04-24 at 6 58 53 PM](https://user-images.githubusercontent.com/92049763/165004782-b0d648f3-c76e-4083-8fb7-c901d513cfa3.png)
 
-## Available Scripts
+## Description
 
-In the project directory, you can run:
+Launch Lookout is a solo showcase project built in 5 days.
 
-### `npm start`
+For those who love space exploration but never seem to be able to catch an important rocket launch until after it's already happened, Launch Lookout is here to help!
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Launch Lookout is designed to provide updated information on the next upcoming launches from global public and commercial aerospace companies, along with countdown timers, mission details, links to live webcasts and more. Need some extra help keeping track? Bookmark a launch you don't want to miss to add it to your Bookmarks section.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The goal of this project was to incorporate React.js fundamentals, React Router, end-to-end testing with Cypress, RESTful APIs, as well as our own creativity to create a showcase piece.
 
-### `npm test`
+## Motivation
+- Demonstrate mastery of React.js, React Router, Cypress, and asynchronous JavaScript
+- Develop user personas and stories to inform site design and target audience and solve a unique problem
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Technology Used
+- React.js
+- React Router
+- React Context API
+- JavaScript
+- HTML / JSX
+- CSS3
+- Fetch API
+- Cypress
+- date-fns
 
-### `npm run build`
+## Deployment
+Site deployment coming soon! 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Features
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Main Dashboard
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+On load the user will see the main dashboard with the next immediate launch displayed at the top along with a countdown timer. The user can scroll down to view additional launches and bookmark them if they choose. On the right-hand panel, the user can view a list of upcoming spaceflight events such as splashdowns and EVAs and view the livestream links.
 
-### `npm run eject`
+![launch-lookout-main-demo](https://user-images.githubusercontent.com/92049763/165005008-25d6faf9-c624-4fc3-adb6-c152f29e8339.gif)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<details>
+  <summary>Under the Hood</summary>
+  Upcoming Launches are populated using the fetch API from the Space Launch Now API, stored within a central context provider, and given to the children components as needed for rendering. Events are retrieved from a separate endpoint and stored only in the Events component.
+</details>
+</br>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Single Launch Detail
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+When a user clicks on the View Launch Details button attached to any of the upcoming launches, they are directed to a separate page with a unique URL where they can view additional information about that launch including mission description, mission patch, launch provider and rocket type information, and launch location. The user can also bookmark a launch from this page.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+![launch-lookout-single-page-demo](https://user-images.githubusercontent.com/92049763/165005044-0e248a2e-b25c-46fa-bfd5-c47a2fdeebb4.gif)
 
-## Learn More
+<details>
+  <summary>Under the Hood</summary>
+  Additional launch detail is retrieved from the main Data Context provider and rendered out.
+</details>
+</br>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Bookmark a Launch
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+A user can bookmark a launch from either the main dashboard or from the single launch page.
 
-### Code Splitting
+<details>
+  <summary>Under the Hood</summary>
+  Bookmarking flow is handled with a Bookmark Context Provider that is able to store bookmarks in state and pass that data to various child components. This allows launches to be bookmarked and their visual success cue to persist across pages.
+</details>
+</br>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Bookmarked Launches View 
 
-### Analyzing the Bundle Size
+From the main dashboard, the user can navigate to the Bookmarks page where they can see all of their bookmarked launches. From here they can navigate to each launch's detail page, as well as remove launches from the bookmarks.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+![launch-lookout-bookmark-demo](https://user-images.githubusercontent.com/92049763/165005078-7c7ca54f-1351-425b-9464-79531d393197.gif)
 
-### Making a Progressive Web App
+<details>
+  <summary>Under the Hood</summary>
+  Clicking on the delete button for a launch will remove that launch from the Bookmark Context state and re-render the page.
+</details>
+</br>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Testing & Accessibility
 
-### Advanced Configuration
+Launch Lookout is fully end-to-end tested with Cypress. URLs are tested and all network requests are stubbed. The site was also built to be screen-reader accessible.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
+## Future Additions
+- Incorporate Local Storage or a remote Express microservice so bookmarked launches persist after page refresh
+- Incorporate the built in Notifications API for in-browser notifcations on bookmarked launches occurring in the next 24 hours
+- Add additional section for spaceflight news or additional information on rocket and aerospace tech capabilities for each launch
+- Finish building out responsive design for small mobile screens
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Credits
+Author: [Maddie Law](https://github.com/maddielaw)
 
-### `npm run build` fails to minify
+Project spec -> [here](https://frontend.turing.edu/projects/module-3/showcase.html)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[Turing School of Software and Design's GitHub](https://github.com/turingschool-examples)
+
+[Icons - React Icons](https://react-icons.github.io/react-icons)
+
+[Space Images - Freepik](https://www.freepik.com/vectors/)
