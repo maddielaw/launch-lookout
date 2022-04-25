@@ -21,7 +21,7 @@
 
 .astronaut-loader {
   height: 100%;
-  margin-top: 5em;
+  margin-top: 7em;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -30,6 +30,7 @@
 
 .events-loader-text {
   font-size: 20px;
+  margin-bottom: 3em;
 }
 
 .astronaut-spinning {
