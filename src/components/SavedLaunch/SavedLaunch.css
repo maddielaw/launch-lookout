@@ -20,8 +20,16 @@
 }
 
 .saved-launch-date {
-  font-size: 20px;
+  font-size: 15px;
   font-style: italic;
+}
+
+.saved-name {
+  font-size: 20px;
+}
+
+.saved-mission {
+  font-size: 15px;
 }
 
 .saved-img-container {
@@ -58,8 +66,8 @@
   border: 1px solid #594BDA;
   border-radius: 20px;
   font-size: 16px;
-  height: 2.5em;
-  width: 2.5em;
+  height: 2em;
+  width: 2em;
   color: #E7E5FF;
   cursor: pointer;
 }
@@ -71,5 +79,21 @@
 
 .saved-company {
   color: #594BDA;
+}
+
+
+@media screen and (max-width: 375px) {
+  .saved-launch-date {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .saved-launch-date {
+    font-size: 15px;
+  }
+  .saved-name {
+    font-size: 20px;
+  }
 }
 

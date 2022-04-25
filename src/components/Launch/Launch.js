@@ -41,25 +41,14 @@ const Launch = ({ id, name, launchDate, company, image, mission }) => {
           {format(new Date(launchDate), "E. MMMM dd, yyy, p")}
         </p>
         <h3 className="launch-name">{name}</h3>
-        {mission ? (
-          <p className="launch-mission-description">{mission.description}</p>
-        ) : (
-          <p>No mission description available at this time!</p>
-        )}
+        {mission ? (<p className="launch-mission-description">{mission.description}</p>) : (<p>No mission description available at this time!</p>)}
         <div className="launch-card-btn-container">
           <Link to={`/launches/${id}`}>
             <button className="launch-details-btn">View Launch Details</button>
           </Link>
           {isBookmarked ? (
-            <button className="bookmark-btn bookmarked" disabled>
-              <IoCheckmarkOutline className="check-icon" />
-              Launch Bookmarked{" "}
-            </button>
-          ) : (
-            <button className="bookmark-btn" onClick={() => addBookmark()}>
-              Bookmark this Launch
-            </button>
-          )}
+            <button className="bookmark-btn bookmarked" disabled><IoCheckmarkOutline className="check-icon" />Launch Bookmarked{" "}</button>) 
+            : (<button className="bookmark-btn" onClick={() => addBookmark()}>Bookmark this Launch</button>)}
         </div>
       </div>
     </section>

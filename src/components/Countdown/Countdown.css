@@ -19,7 +19,7 @@
 
 .countdown-timer {
   display: flex;
-  font-size: 45px;
+  font-size: 35px;
   border-radius: 50px;
 }
 
@@ -28,4 +28,40 @@
   justify-content: center;
   width: 1em;
   color: #7AF9F4;
+}
+
+@media screen and (max-width: 1300px) {
+  .countdown-timer {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 915px) {
+  .countdown-timer {
+    font-size: 35px;
+  }
+}
+
+@media screen and (max-width: 730px) {
+  .countdown-timer {
+    font-size: 28px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .countdown-timer {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .countdown-timer {
+    font-size: 17px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .countdown-timer {
+    font-size: 14px;
+  }
 }

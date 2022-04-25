@@ -13,6 +13,12 @@
   margin: 1em;
 }
 
+.events-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .astronaut-loader {
   height: 100%;
   margin-top: 5em;
@@ -23,13 +29,12 @@
 }
 
 .events-loader-text {
-  font-size: 30px;
+  font-size: 20px;
 }
 
 .astronaut-spinning {
   height: 5em;
   width: 5em;
-  /* margin-top: 5em; */
   animation: rotate 3s linear infinite;
 }
 
@@ -39,5 +44,19 @@
   }
   to {
     transform: rotate(359deg);
+  }
+}
+
+
+@media screen and (max-width: 1720px) {
+  .events-section {
+    padding-right: 0;
+  }
+}
+
+
+@media screen and (max-width: 915px) {
+  .events-header {
+    font-size: 25px;
   }
 }

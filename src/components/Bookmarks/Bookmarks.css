@@ -17,7 +17,7 @@
 }
 
 .bookmark-header-text {
-  font-size: 40px;
+  font-size: 30px;
 }
 
 .bookmark-container {
@@ -27,5 +27,23 @@
   grid-gap: 2em;
   padding: 2em;
   height: 100vh;
-  width: 100vw;
+}
+
+
+@media screen and (max-width: 1024px) {
+  .bookmark-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .bookmark-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .bookmark-header-text {
+    font-size: 30px;
+  }
 }

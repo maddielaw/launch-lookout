@@ -22,7 +22,7 @@
 }
 
 .header {
-  font-size: 50px;
+  font-size: 40px;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -39,8 +39,8 @@
   background-color: #171459;
   border: 1px solid #594BDA;
   border-radius: 25px;
-  font-size: 18px;
-  height: 3em;
+  font-size: 15px;
+  height: 2.4em;
   width: 14em;
   color: #E7E5FF;
   margin-right: 1.5em;
@@ -70,3 +70,63 @@
   }
 }
 
+@media screen and (max-width: 1300px) {
+  .header {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .header {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .header {
+    font-size: 30px;
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 915px) {
+  .App {
+    flex-direction: column;
+  }
+  .main-section {
+    width: 100%;
+  }
+  .space-news {
+    width: 100%;
+  }
+  .header {
+    font-size: 40px;
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .nav {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .header {
+    margin-top: .5em;
+    width: 70%;
+    justify-content: center;
+  }
+  .bookmarks-page-btn {
+    height: 2em;
+    margin: 0;
+  }
+  .header-rocket {
+    margin-right: .5em;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .header {
+    font-size: 30px;
+    width: 90%;
+  }
+}

@@ -19,9 +19,9 @@
 .bookmark-btn {
   background-color: #594BDA;
   border-radius: 20px;
-  font-size: 16px;
+  font-size: 13px;
   height: 2.5em;
-  width: 13em;
+  width: 15em;
   border: none;
   color: #E7E5FF;
   cursor: pointer;
@@ -41,6 +41,47 @@
 
 .next-launch-date {
   font-style: italic;
-  font-size: 20px;
+  font-size: 15px;
   color: #594BDA;
 }
+
+.next-launch-name {
+  font-size: 20px;
+}
+
+
+@media screen and (max-width: 1000px) {
+  .next-launch-name {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 915px) {
+  .next-launch-name {
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .next-launch-name {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .next-launch-date {
+    font-size: 15px;
+  }
+  .launch-details-btn,
+  .bookmark-btn {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .launch-details-btn,
+  .bookmark-btn {
+    font-size: 10px;
+  }
+}
+

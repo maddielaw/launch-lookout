@@ -21,7 +21,7 @@ const App = () => {
               <section className="main-section">
                 <nav className="nav">
                   <h1 className="header">
-                    <IoIosRocket />
+                    <IoIosRocket className="header-rocket"/>
                     Launch Lookout
                   </h1>
                   <Link to="/bookmarks">

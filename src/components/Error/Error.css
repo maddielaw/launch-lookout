@@ -21,7 +21,7 @@
 }
 
 .error-text h1 {
-  font-size: 35px;
+  font-size: 30px;
   margin-bottom: 2em;
   color: white;
 }
@@ -29,7 +29,7 @@
 .error-header {
   display: flex;
   align-items: center;
-  font-size: 50px;
+  font-size: 40px;
   border-bottom: 1px solid #594BDA;
   width: 100%;
 }
@@ -42,8 +42,8 @@
   background-color: #171459;
   border: 1px solid #594BDA;
   border-radius: 20px;
-  font-size: 20px;
-  height: 2.5em;
+  font-size: 15px;
+  height: 2.2em;
   width: 9em;
   margin-top: 3em;
   color: #E7E5FF;

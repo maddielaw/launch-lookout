@@ -32,10 +32,11 @@
 .launch-date  {
   font-style: italic;
   color: #594BDA;
+  font-size: 13px;
 }
 
 .launch-name {
-  font-size: 27px;
+  font-size: 20px;
 }
 
 .img-company-container {
@@ -44,4 +45,56 @@
   justify-content: center;
   align-items: center;
   color: #594BDA;
+}
+
+
+@media screen and (max-width: 1130px) {
+  .launch-card-btn-container button {
+    width: 13em;
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .launch-card-btn-container button {
+    width: 13em;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .launch-card-btn-container button {
+    width: 12em;
+  }
+}
+
+@media screen and (max-width: 915px) {
+  .launch-card-btn-container button {
+    width: 12em;
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 665px) {
+  .launch-card-btn-container button {
+    width: 13em;
+    font-size: 10px;
+  }
+  .launch-name {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .launch-card-btn-container button {
+    width: 10em;
+    font-size: 12px;
+    height: 3.2em;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .launch-card {
+    flex-direction: column;
+  }
 }

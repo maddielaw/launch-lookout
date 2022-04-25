@@ -7,6 +7,10 @@
   background: linear-gradient(90deg, rgba(16,15,69,1) 0%, rgba(27,23,103,1) 50%, rgba(16,15,69,1) 100%);
 }
 
+.mission-name {
+  font-size: 25px;
+}
+
 .titles-div {
   display: flex;
   justify-content: space-between;
@@ -25,6 +29,7 @@
 .routing-btns {
   display: flex;
   justify-content: space-around;
+  align-items: center;
   width: 110%;
 }
 
@@ -32,8 +37,8 @@
   background-color: #171459;
   border: 1px solid #594BDA;
   border-radius: 20px;
-  font-size: 16px;
-  height: 2.5em;
+  font-size: 15px;
+  height: 2em;
   width: 8.5em;
   color: #E7E5FF;
   cursor: pointer;
@@ -60,16 +65,12 @@
   background-color: #6F61FF;
 }
 
-.mission-name {
-  font-size: 30px;
-}
-
 .single-launch-date {
   font-style: italic;
 }
 
 .launch-status {
-  font-size: 20px;
+  font-size: 17px;
   display: flex;
   align-items: center;
 }
@@ -85,7 +86,7 @@
 }
 
 .single-countdown-container p {
-  font-size: 35px;
+  font-size: 22px;
 }
 
 .single-countdown-container {
@@ -94,7 +95,8 @@
   justify-content: center;
   background: linear-gradient(145deg, #15113c, #120e32);
   border-radius: 50px;
-  width: 43%;
+  width: 35%;
+  height: 4.2em;
   box-shadow:  19px 19px 38px #100e3e,-19px -19px 38px #1c186c;
 }
 
@@ -106,4 +108,92 @@
 .check-icon {
   font-size: 25px;
   margin: .2em;
+}
+
+@media screen and (max-width: 1360px) {
+  .single-countdown-container p {
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .single-countdown-container p {
+    font-size: 17px;
+  }
+  .single-countdown-container {
+    width: 40%;
+    height: 60%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .single-countdown-container p {
+    font-size: 13px;
+  }
+  .bookmark-btn,
+  .to-bookmarks,
+  .back-to-main {
+    font-size: 12px;
+  }
+  .mission-name {
+    font-size: 22px;
+  }
+  .launch-status {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .titles-div {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    height: 20%;
+  }
+  .mission-name {
+    font-size: 30px;
+  }
+  .single-countdown-container {
+    width: 90%;
+    height: 20%;
+    margin-top: 1em;
+    box-shadow: none;
+  }
+  .title-buttons {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 1em;
+  }
+  .bookmark-btn,
+  .to-bookmarks {
+    font-size: 12px;
+  }
+  .bookmark-btn {
+    width: 20em;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .mission-name {
+    font-size: 25px;
+  }
+  .title-buttons {
+    width: 100%;
+  }
+  .bookmark-btn {
+    width: 30em;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .mission-name {
+    font-size: 20px;
+  }
+  .title-buttons {
+    width: 100%;
+  }
+  .bookmark-btn {
+    width: 30em;
+  }
 }
