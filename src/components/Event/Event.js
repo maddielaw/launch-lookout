@@ -1,5 +1,6 @@
 import React from "react";
 import "./Event.css";
+import PropTypes from 'prop-types';
 
 const Event = ({ id, name, description, location, date, videoLink }) => {
   return (
@@ -22,3 +23,11 @@ const Event = ({ id, name, description, location, date, videoLink }) => {
 };
 
 export default Event;
+
+Event.propTypes = {
+  name: PropTypes.string,
+  description: PropTypes.string,
+  location: PropTypes.string,
+  date: PropTypes.string,
+  videoLink: PropTypes.string
+};

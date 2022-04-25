@@ -8,6 +8,7 @@ import "./SingleLaunchPage.css";
 import Countdown from "../Countdown/Countdown";
 import { IoChevronBackOutline, IoCheckmarkOutline } from "react-icons/io5";
 import { FaCircle } from "react-icons/fa";
+import PropTypes from 'prop-types';
 
 const SingleLaunchPage = ({ id }) => {
   const allLaunchData = useContext(DataContext);
@@ -100,3 +101,7 @@ const SingleLaunchPage = ({ id }) => {
 };
 
 export default SingleLaunchPage;
+
+SingleLaunchPage.propTypes = {
+  id: PropTypes.string
+};

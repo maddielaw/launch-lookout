@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { intervalToDuration, isBefore } from 'date-fns';
 import './Countdown.css';
+import PropTypes from 'prop-types';
 
 const Countdown = ({ date, status, statusDescription }) => {
   const [currentTime, setCurrentTime] = useState(new Date());
@@ -47,3 +48,9 @@ const Countdown = ({ date, status, statusDescription }) => {
 };
  
 export default Countdown;
+
+Countdown.propTypes = {
+  date: PropTypes.string,
+  status: PropTypes.string,
+  statusDescription: PropTypes.string
+};

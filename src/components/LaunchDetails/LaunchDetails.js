@@ -2,6 +2,7 @@ import "./LaunchDetails.css";
 import { format } from "date-fns";
 import { FaSpaceShuttle } from "react-icons/fa";
 import { GiSpaceShuttle } from "react-icons/gi";
+import PropTypes from 'prop-types';
 
 const LaunchDetails = ({ launch }) => {
   return (
@@ -92,3 +93,7 @@ const LaunchDetails = ({ launch }) => {
 };
 
 export default LaunchDetails;
+
+LaunchDetails.propTypes = {
+  launch: PropTypes.object
+};

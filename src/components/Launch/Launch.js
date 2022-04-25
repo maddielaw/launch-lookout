@@ -5,6 +5,7 @@ import { format } from "date-fns";
 import { BookmarkContext } from "../../contexts/BookmarkContext";
 import "./Launch.css";
 import { IoCheckmarkOutline } from "react-icons/io5";
+import PropTypes from 'prop-types';
 
 const Launch = ({ id, name, launchDate, company, image, mission }) => {
   const bookmarkData = useContext(BookmarkContext);
@@ -56,3 +57,12 @@ const Launch = ({ id, name, launchDate, company, image, mission }) => {
 };
 
 export default Launch;
+
+Launch.propTypes = {
+  id: PropTypes.string,
+  name: PropTypes.string,
+  launchDate: PropTypes.string,
+  company: PropTypes.string,
+  image: PropTypes.string,
+  mission: PropTypes.object
+};

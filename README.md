@@ -28,7 +28,7 @@ The goal of this project was to incorporate React.js fundamentals, React Router,
 - date-fns
 
 ## Deployment
-Site deployment coming soon! 
+Site is deployed via Surge and can be accessed 👉🏻 [here](https://launch-lookout.surge.sh/)
 
 ## Features
 

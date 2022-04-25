@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import "./SavedLaunch.css";
+import PropTypes from 'prop-types';
 
 const SavedLaunch = ({
   id,
@@ -47,3 +48,13 @@ const SavedLaunch = ({
 };
 
 export default SavedLaunch;
+
+SavedLaunch.propTypes = {
+  id: PropTypes.string,
+  name: PropTypes.string,
+  comany: PropTypes.string,
+  image: PropTypes.string,
+  mission: PropTypes.string,
+  launchDate: PropTypes.string,
+  removeBookmark: PropTypes.func
+};
