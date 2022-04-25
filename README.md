@@ -26,6 +26,7 @@ The goal of this project was to incorporate React.js fundamentals, React Router,
 - Fetch API
 - Cypress
 - date-fns
+- PropTypes
 
 ## Deployment
 Site is deployed via Surge and can be accessed 👉🏻 [here](https://launch-lookout.surge.sh/)
