@@ -148,26 +148,28 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    height: 20%;
   }
   .mission-name {
-    font-size: 30px;
+    font-size: 20px;
   }
   .single-countdown-container {
     width: 90%;
     height: 20%;
     margin-top: 1em;
     box-shadow: none;
+    align-self: center;
   }
   .title-buttons {
     flex-direction: row;
     justify-content: flex-start;
-    align-items: flex-start;
+    align-items: center;
     margin-top: 1em;
+    height: 10%;
   }
   .bookmark-btn,
   .to-bookmarks {
     font-size: 12px;
+    height: 2em;
   }
   .bookmark-btn {
     width: 20em;
@@ -195,5 +197,8 @@
   }
   .bookmark-btn {
     width: 30em;
+  }
+  .single-countdown-container p {
+    font-size: 12px;
   }
 }

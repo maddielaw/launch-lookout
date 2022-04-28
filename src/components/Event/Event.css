@@ -66,25 +66,6 @@
 }
 
 
-
-/* @media screen and (max-width: 1720px) {
-  .event-card {
-    width: 90%;
-  }
-  .event-video-box {
-    margin-left: 16em;
-  }
-}
-
-@media screen and (max-width: 1440px) {
-  .event-card {
-    width: 80%;
-  }
-  .event-video-box {
-    margin-left: 10em;
-  }
-} */
-
 @media screen and (max-width: 1300px) {
   .event-video-box {
     margin-left: 7em;
@@ -132,6 +113,9 @@
   }
   .event-video-box {
     margin-left: 10em;
+  }
+  .event-date {
+    font-size: 12px;
   }
 }
 

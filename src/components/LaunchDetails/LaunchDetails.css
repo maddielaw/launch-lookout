@@ -215,9 +215,6 @@
     width: 90%;
     height: 90%;
   }
-  .launch-provider-description {
-    display: none;
-  }
   .description,
   .orbit,
   .mission-type,
@@ -258,6 +255,9 @@
   .map-img {
     height: 15em;
     width: 50em;
+  }
+  .launch-provider-description {
+    display: none;
   }
 }
 

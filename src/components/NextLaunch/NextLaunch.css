@@ -13,6 +13,7 @@
 .next-launch-btn-container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .launch-details-btn,
@@ -76,14 +77,14 @@
   .launch-details-btn,
   .bookmark-btn {
     font-size: 13px;
-    width: 10em;
+    width: 11em;
+    height: 2em;
   }
 }
 
 @media screen and (max-width: 320px) {
-  .launch-details-btn,
-  .bookmark-btn {
-    font-size: 10px;
+  .bookmark-btn:disabled {
+    font-size: 10.5px;
   }
 }
 
