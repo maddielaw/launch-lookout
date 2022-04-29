@@ -71,6 +71,12 @@ const SingleLaunchPage = ({ id }) => {
               statusDescription={launch.status.description}
             />
           )}
+          {launch.status.abbrev === "TBD" && (
+          <p className="placeholder-status">
+            Current launch date is a placeholder. Check back later for
+            confirmed liftoff date and time.
+          </p>
+        )}
         </div>
         <div className="title-buttons">
           <div className="routing-btns">

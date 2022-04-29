@@ -86,7 +86,7 @@
 }
 
 .single-countdown-container p {
-  font-size: 22px;
+  font-size: 20px;
 }
 
 .single-countdown-container {
@@ -108,6 +108,12 @@
 .check-icon {
   font-size: 25px;
   margin: .2em;
+}
+
+.placeholder-status {
+  font-style: italic;
+  font-size: 10px;
+  margin-left: 1em;
 }
 
 @media screen and (max-width: 1360px) {
