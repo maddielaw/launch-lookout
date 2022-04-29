@@ -162,11 +162,6 @@
   font-size: 30px;
 }
 
-.placeholder-status {
-  font-style: italic;
-  font-size: 17px;
-}
-
 
 @media screen and (max-width: 1440px) {
   .map-img {
@@ -215,9 +210,6 @@
     width: 90%;
     height: 90%;
   }
-  .launch-provider-description {
-    display: none;
-  }
   .description,
   .orbit,
   .mission-type,
@@ -258,6 +250,9 @@
   .map-img {
     height: 15em;
     width: 50em;
+  }
+  .launch-provider-description {
+    display: none;
   }
 }
 

@@ -60,12 +60,6 @@ const LaunchDetails = ({ launch }) => {
               Launch window start:{" "}
               {format(new Date(launch.window_start), "E. MMMM dd, yyy, p")}
             </p>
-            {launch.status.abbrev === "TBD" && (
-              <p className="placeholder-status">
-                Current launch date is a placeholder. Check back later for
-                confirmed liftoff date and time.
-              </p>
-            )}
           </div>
           <div className="rocket-details">
             <p className="rocket-type">
