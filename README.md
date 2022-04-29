@@ -79,16 +79,19 @@ From the main dashboard, the user can navigate to the Bookmarks page where they 
 </details>
 </br>
 
-### Testing & Accessibility
+### Testing, Responsiveness & Accessibility
 
 Launch Lookout is fully end-to-end tested with Cypress. URLs are tested and all network requests are stubbed. The site was also built to be screen-reader accessible.
+
+Launch Lookout is also responsive to desktop, laptop, tablet, and various mobile screen sizes.
+
+![launch-lookout-mobile-demo](https://user-images.githubusercontent.com/92049763/165866912-91f39776-51f7-4a8e-b494-ea173acbbbdb.gif)
 
 
 ## Future Additions
 - Incorporate Local Storage or a remote Express microservice so bookmarked launches persist after page refresh
 - Incorporate the built in Notifications API for in-browser notifcations on bookmarked launches occurring in the next 24 hours
 - Add additional section for spaceflight news or additional information on rocket and aerospace tech capabilities for each launch
-- Finish building out responsive design for small mobile screens
 
 ## Credits
 Author: [Maddie Law](https://github.com/maddielaw)
