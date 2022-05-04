@@ -1,0 +1,15 @@
+version: 2.1
+
+orbs:
+  node: circleci/node@4.7
+  cypress: cypress-io/cypress@1
+workflows:
+  build: 
+    jobs:
+      - cypress/run:
+        group: 'all tests'
+        start: 'npm start'
+        wait-on: 'http://localhost:3000'
+      - node/test:
+          version: '16.10'
+          pkg-manager: npm
